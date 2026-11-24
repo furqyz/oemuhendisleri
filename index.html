@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr" class="scroll-smooth">
+<html lang="tr" class="scroll-smooth splash-open">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -68,21 +68,38 @@
       overflow-x: hidden;
     }
 
+    html.splash-open,
     body.splash-open {
       overflow: hidden;
+      height: 100%;
+      overscroll-behavior: none;
+      touch-action: none;
     }
 
-    /* Full-screen Splash Screen */
+    /* Full-screen Splash Screen (iOS / Mobile Safe) */
     #splash-screen {
       position: fixed;
-      inset: 0;
-      width: 100vw;
-      height: 100vh;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      min-height: 100dvh;
       z-index: 9999;
-      background-color: #F5F7F5;
+      background-color: #0A1E15;
       transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
                   transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
       will-change: opacity, transform;
+    }
+
+    /* Hide scrollbar on mobile quick-nav strip */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
     }
 
     #splash-screen.is-dismissed {
@@ -301,12 +318,42 @@
           aria-label="Menüyü aç veya kapat"
           aria-expanded="false"
           aria-controls="mobile-menu"
-          class="inline-flex h-9 w-9 items-center justify-center rounded-[4px] border border-[#DCE3DF] bg-white text-fir transition-colors hover:bg-sage md:hidden"
+          class="inline-flex items-center gap-1.5 rounded-[5px] bg-fir px-3.5 py-2 text-xs font-bold tracking-wide text-white shadow-sm transition-all duration-200 hover:bg-fir-mid active:scale-95 md:hidden"
         >
-          <span id="menu-icon-open"><i data-lucide="menu" class="h-5 w-5"></i></span>
-          <span id="menu-icon-close" class="hidden"><i data-lucide="x" class="h-5 w-5"></i></span>
+          <span id="menu-icon-open"><i data-lucide="menu" class="h-4 w-4"></i></span>
+          <span id="menu-icon-close" class="hidden"><i data-lucide="x" class="h-4 w-4"></i></span>
+          <span id="menu-btn-label">Menü</span>
         </button>
       </div>
+    </div>
+
+    <!-- Mobile Quick-Access Bar (Always Visible Below Header on Mobile) -->
+    <div class="no-scrollbar flex items-center gap-2 overflow-x-auto border-t border-[#EDF1EE] bg-[#FAFBF9] px-4 py-2 md:hidden">
+      <a href="#talepler" class="shrink-0 rounded-[4px] border border-[#DCE3DF] bg-white px-2.5 py-1 text-[11px] font-semibold text-ink transition-colors active:bg-fir-light">
+        Taleplerimiz
+      </a>
+      <a href="#surec" class="shrink-0 rounded-[4px] border border-[#DCE3DF] bg-white px-2.5 py-1 text-[11px] font-semibold text-ink transition-colors active:bg-fir-light">
+        Süreç
+      </a>
+      <a href="#istihdam" class="shrink-0 rounded-[4px] border border-[#DCE3DF] bg-white px-2.5 py-1 text-[11px] font-semibold text-ink transition-colors active:bg-fir-light">
+        İstihdam
+      </a>
+      <a href="#paylasimlar" class="shrink-0 rounded-[4px] border border-[#DCE3DF] bg-white px-2.5 py-1 text-[11px] font-semibold text-ink transition-colors active:bg-fir-light">
+        Paylaşımlar
+      </a>
+      <button
+        type="button"
+        data-open-tweets
+        class="inline-flex shrink-0 items-center gap-1 rounded-[4px] bg-[#0F1419] px-2.5 py-1 text-[11px] font-bold text-white"
+      >
+        <svg class="h-3 w-3" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+        </svg>
+        <span>X Şablonları</span>
+      </button>
+      <a href="#iletisim" class="shrink-0 rounded-[4px] border border-[#DCE3DF] bg-white px-2.5 py-1 text-[11px] font-semibold text-ink transition-colors active:bg-fir-light">
+        İletişim
+      </a>
     </div>
 
     <!-- Mobile Navigation Panel -->
@@ -1831,6 +1878,7 @@
         if (!splashActive || !splash) return;
         splashActive = false;
         splash.classList.add('is-dismissed');
+        document.documentElement.classList.remove('splash-open');
         document.body.classList.remove('splash-open');
 
         window.setTimeout(() => {
@@ -1926,12 +1974,14 @@
       const mobileMenu = document.getElementById('mobile-menu');
       const iconOpen = document.getElementById('menu-icon-open');
       const iconClose = document.getElementById('menu-icon-close');
+      const menuBtnLabel = document.getElementById('menu-btn-label');
       const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
       const setMenuState = (isOpen) => {
         mobileMenu.classList.toggle('hidden', !isOpen);
         iconOpen.classList.toggle('hidden', isOpen);
         iconClose.classList.toggle('hidden', !isOpen);
+        if (menuBtnLabel) menuBtnLabel.textContent = isOpen ? 'Kapat' : 'Menü';
         menuBtn.setAttribute('aria-expanded', String(isOpen));
       };
 
