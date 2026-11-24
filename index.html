@@ -1,0 +1,2253 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orman Endüstri Mühendisleri • 2026 Atama Süreci | #OEMeKADRO</title>
+  <meta name="description" content="Orman Endüstri Mühendisleri (OEM) kamu atama ve kadro mücadelesi resmi bilgilendirme ve koordinasyon platformu. OGM'de 250, DKMP'de 50 kadro talebi." />
+  <meta name="theme-color" content="#0F2E20" />
+  <meta property="og:title" content="Orman Endüstri Mühendisleri • #OEMeKADRO" />
+  <meta property="og:description" content="Aralık 2026 atamalarında OGM bünyesinde 250, DKMP bünyesinde 50 Orman Endüstri Mühendisi kadrosu talep ediyoruz." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./images/post-3.jpg" />
+  <meta property="og:image:alt" content="Orman Endüstri Mühendisleri OGM 250 Kadro, DKMP 50 Kadro — #OEMeKADRO" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@oemuhendisleri" />
+  <meta name="twitter:title" content="Orman Endüstri Mühendisleri • #OEMeKADRO" />
+  <meta name="twitter:description" content="Aralık 2026 atamalarında OGM bünyesinde 250, DKMP bünyesinde 50 Orman Endüstri Mühendisi kadrosu talep ediyoruz." />
+  <meta name="twitter:image" content="./images/post-3.jpg" />
+
+  <!-- Inline SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%230F2E20'/%3E%3Cpath d='M16 5L9.5 16h4L8.5 23.5h15L18.5 16h4L16 5z' fill='%23FFFFFF'/%3E%3Crect x='14.8' y='23.5' width='2.4' height='3.5' fill='%23F4B41A'/%3E%3C/svg%3E" />
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Segoe UI"', '"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          colors: {
+            fir: {
+              DEFAULT: '#0F2E20',
+              dark: '#0A2016',
+              mid: '#194732',
+              light: '#EDF4F0',
+            },
+            gold: {
+              DEFAULT: '#F4B41A',
+              deep: '#B87D0B',
+              soft: '#FEF8E8',
+            },
+            sage: '#F5F7F5',
+            ink: {
+              DEFAULT: '#161F1B',
+              muted: '#4E5D56',
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background-color: #FFFFFF;
+      color: #161F1B;
+      overflow-x: hidden;
+    }
+
+    body.splash-open {
+      overflow: hidden;
+    }
+
+    /* Full-screen Splash Screen */
+    #splash-screen {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 9999;
+      background-color: #F5F7F5;
+      transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: opacity, transform;
+    }
+
+    #splash-screen.is-dismissed {
+      opacity: 0;
+      transform: translateY(-48px);
+      pointer-events: none;
+    }
+
+    /* Site-wide Cursor Tree Trail Layer */
+    #cursor-trail-layer {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 99999;
+      overflow: hidden;
+    }
+
+    /* GPU-Accelerated Cursor Tree Trail Particles */
+    .tree-particle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      user-select: none;
+      line-height: 1;
+      contain: layout style;
+      will-change: transform, opacity;
+      animation: treeFloatFade 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    @keyframes treeFloatFade {
+      0% {
+        opacity: var(--start-opacity, 0.4);
+        transform: translate3d(var(--x0), var(--y0), 0) scale(1) rotate(0deg);
+      }
+      100% {
+        opacity: 0;
+        transform: translate3d(var(--x1), var(--y1), 0) scale(0.45) rotate(var(--rot));
+      }
+    }
+
+    /* Microsoft-inspired subtle nav underline */
+    .ms-nav-link {
+      position: relative;
+    }
+    .ms-nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 2px;
+      background-color: #0F2E20;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.2s ease;
+    }
+    .ms-nav-link:hover::after,
+    .ms-nav-link.is-active::after {
+      transform: scaleX(1);
+    }
+    .ms-nav-link.is-active {
+      color: #0F2E20;
+      font-weight: 700;
+    }
+
+    /* Hero cinematic gradient overlay */
+    .hero-overlay {
+      background: linear-gradient(
+        95deg,
+        rgba(15, 46, 32, 0.96) 0%,
+        rgba(15, 46, 32, 0.88) 46%,
+        rgba(15, 46, 32, 0.48) 100%
+      );
+    }
+    @media (max-width: 768px) {
+      .hero-overlay {
+        background: linear-gradient(
+          180deg,
+          rgba(15, 46, 32, 0.92) 0%,
+          rgba(15, 46, 32, 0.85) 65%,
+          rgba(15, 46, 32, 0.94) 100%
+        );
+      }
+    }
+
+    /* Ensure Instagram embeds stay strictly inside cards */
+    .instagram-embed-wrap .instagram-media {
+      min-width: 0 !important;
+      max-width: 100% !important;
+      width: 100% !important;
+      margin: 0 !important;
+      border: 0 !important;
+      box-shadow: none !important;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #splash-screen {
+        transition: opacity 0.2s ease;
+      }
+      .tree-particle {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body class="splash-open antialiased selection:bg-fir/15 selection:text-fir">
+  <!-- Site-Wide Non-Blocking Cursor Tree Trail Layer -->
+  <div id="cursor-trail-layer" aria-hidden="true"></div>
+
+  <!-- ========================================================= -->
+  <!-- 1. FULL-SCREEN INTERACTIVE SPLASH / INTRO SCREEN          -->
+  <!-- ========================================================= -->
+  <div
+    id="splash-screen"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="splash-title"
+    class="flex flex-col items-center justify-center overflow-hidden bg-[#0A1E15] px-6 text-center"
+  >
+    <!-- Misty Pine Forest Background Image -->
+    <img
+      src="./images/indir.jpg"
+      alt=""
+      aria-hidden="true"
+      class="pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-85"
+    />
+    <div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#0A1E15]/35 via-[#0A1E15]/50 to-[#0A1E15]/75"></div>
+
+    <!-- Centered Intro Card Content -->
+    <div class="relative z-10 mx-auto flex max-w-2xl flex-col items-center">
+      <h1 id="splash-title" class="text-3xl font-bold tracking-tight text-white drop-shadow-sm sm:text-5xl">
+        Orman Endüstri Mühendisleri
+      </h1>
+
+      <p class="mt-4 text-sm font-medium tracking-wide text-white/90 drop-shadow-sm sm:text-base">
+        Orman Endüstri Mühendisliği Mezunları ve Öğrencileri Dayanışma Sayfası. <span class="font-bold text-gold">#OEMeKADRO</span>
+      </p>
+
+      <!-- Enter Site Button -->
+      <button
+        id="enter-site-btn"
+        type="button"
+        class="group mt-9 inline-flex items-center gap-2.5 rounded-md bg-white px-8 py-3.5 text-sm font-bold text-fir shadow-lg transition-all duration-200 hover:bg-gold hover:text-fir-dark focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-fir sm:text-base"
+      >
+        <span>Siteye Git</span>
+        <span aria-hidden="true" class="transition-transform duration-200 group-hover:translate-x-1">→</span>
+      </button>
+
+      <p class="mt-6 text-xs font-medium tracking-wide text-white/75">
+        Tek Ses Tek Yürek
+      </p>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- STICKY MICROSOFT-STYLE CORPORATE HEADER                   -->
+  <!-- ========================================================= -->
+  <header class="sticky top-0 z-50 border-b border-[#E5EAE7] bg-white/95 backdrop-blur-md">
+    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <!-- Brand -->
+      <a href="#top" class="flex items-center gap-3 focus:outline-none">
+        <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-[4px] bg-fir text-white">
+          <svg class="h-5 w-5" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M18 4L10.5 16H14.5L9 25.5H27L21.5 16H25.5L18 4Z" fill="currentColor" />
+            <rect x="16.5" y="25.5" width="3" height="5.5" rx="1" fill="#F4B41A" />
+          </svg>
+        </span>
+        <span class="text-xs font-bold tracking-[0.06em] text-fir sm:text-sm">
+          ORMAN ENDÜSTRİ MÜHENDİSLERİ
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav aria-label="Ana Menü" class="hidden items-center gap-7 md:flex">
+        <a href="#talepler" class="ms-nav-link text-sm font-medium text-ink transition-colors hover:text-fir">
+          Taleplerimiz
+        </a>
+        <a href="#surec" class="ms-nav-link text-sm font-medium text-ink transition-colors hover:text-fir">
+          Süreç
+        </a>
+        <a href="#istihdam" class="ms-nav-link text-sm font-medium text-ink transition-colors hover:text-fir">
+          İstihdam
+        </a>
+        <a href="#paylasimlar" class="ms-nav-link text-sm font-medium text-ink transition-colors hover:text-fir">
+          Paylaşımlar
+        </a>
+        <a href="#iletisim" class="ms-nav-link text-sm font-medium text-ink transition-colors hover:text-fir">
+          İletişim
+        </a>
+      </nav>
+
+      <!-- Right Action Buttons & Mobile Menu Trigger -->
+      <div class="flex items-center gap-2.5">
+        <button
+          type="button"
+          data-open-tweets
+          class="hidden items-center gap-1.5 rounded-[4px] bg-[#0F1419] px-3 py-1.5 text-xs font-bold text-white transition-colors hover:bg-fir sm:inline-flex"
+        >
+          <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+          </svg>
+          <span>Hazır X Şablonları</span>
+        </button>
+
+        <a
+          href="#iletisim"
+          class="hidden items-center rounded-[4px] bg-fir-light px-3.5 py-1.5 text-xs font-bold tracking-wide text-fir transition-colors hover:bg-fir hover:text-white lg:inline-flex"
+        >
+          #OEMeKADRO
+        </a>
+
+        <button
+          id="mobile-menu-btn"
+          type="button"
+          aria-label="Menüyü aç veya kapat"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          class="inline-flex h-9 w-9 items-center justify-center rounded-[4px] border border-[#DCE3DF] bg-white text-fir transition-colors hover:bg-sage md:hidden"
+        >
+          <span id="menu-icon-open"><i data-lucide="menu" class="h-5 w-5"></i></span>
+          <span id="menu-icon-close" class="hidden"><i data-lucide="x" class="h-5 w-5"></i></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Panel -->
+    <div id="mobile-menu" class="hidden border-t border-[#E5EAE7] bg-white md:hidden">
+      <nav aria-label="Mobil Menü" class="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4 sm:px-6">
+        <a href="#talepler" class="mobile-nav-link rounded-[4px] px-3 py-2.5 text-sm font-medium text-ink hover:bg-sage hover:text-fir">
+          Taleplerimiz
+        </a>
+        <a href="#surec" class="mobile-nav-link rounded-[4px] px-3 py-2.5 text-sm font-medium text-ink hover:bg-sage hover:text-fir">
+          Süreç
+        </a>
+        <a href="#istihdam" class="mobile-nav-link rounded-[4px] px-3 py-2.5 text-sm font-medium text-ink hover:bg-sage hover:text-fir">
+          İstihdam
+        </a>
+        <a href="#paylasimlar" class="mobile-nav-link rounded-[4px] px-3 py-2.5 text-sm font-medium text-ink hover:bg-sage hover:text-fir">
+          Paylaşımlar
+        </a>
+        <button
+          type="button"
+          data-open-tweets
+          class="mobile-nav-link flex w-full items-center gap-2 rounded-[4px] bg-[#0F1419] px-3 py-2.5 text-left text-sm font-bold text-white transition-colors hover:bg-fir"
+        >
+          <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+          </svg>
+          <span>Hazır X Şablonları</span>
+        </button>
+        <a href="#iletisim" class="mobile-nav-link rounded-[4px] px-3 py-2.5 text-sm font-medium text-ink hover:bg-sage hover:text-fir">
+          İletişim
+        </a>
+        <div class="mt-2 border-t border-[#E5EAE7] pt-3">
+          <a href="#iletisim" class="mobile-nav-link inline-flex items-center rounded-[4px] bg-fir-light px-3.5 py-1.5 text-xs font-bold tracking-wide text-fir">
+            #OEMeKADRO
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ========================================================= -->
+    <!-- 2. FULL-BLEED CINEMATIC MICROSOFT-STYLE HERO SHOWCASE     -->
+    <!-- ========================================================= -->
+    <section class="relative w-full overflow-hidden bg-fir">
+      <!-- Background High-Res Forestry Photo -->
+      <img
+        src="https://images.unsplash.com/photo-1792881014064-95f7735eb2ee?auto=format&fit=crop&w=1920&q=85"
+        onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1701169100004-2b9534e0cff3?auto=format&fit=crop&w=1920&q=85';"
+        alt="Endüstriyel ormancılık sahası ve çam ormanı"
+        class="absolute inset-0 h-full w-full object-cover object-center"
+      />
+      <!-- Deep Fir Left-to-Right Corporate Gradient Overlay -->
+      <div aria-hidden="true" class="hero-overlay absolute inset-0"></div>
+
+      <!-- Hero Content -->
+      <div class="relative mx-auto max-w-7xl px-4 pb-24 pt-16 sm:px-6 sm:pb-28 sm:pt-24 lg:px-8 lg:pb-32 lg:pt-28">
+        <div class="max-w-2xl">
+          <!-- Top Highlight Label -->
+          <div class="mb-5 inline-flex items-center gap-2 rounded-[4px] border border-gold/40 bg-gold/15 px-3.5 py-1.5 text-xs font-bold tracking-[0.08em] text-gold">
+            <span>2026 KPSS LİSANS ATAMA SÜRECİ • #OEMeKADRO</span>
+          </div>
+
+          <!-- Main Headline -->
+          <h1 class="text-3xl font-bold leading-[1.15] tracking-tight text-white sm:text-5xl lg:text-[3.25rem]">
+            Orman Endüstri Mühendisleri Yıllardır Alamadığı
+            <span class="text-gold">Kadroyu İstiyor!</span>
+          </h1>
+
+          <!-- Intro Paragraph -->
+          <p class="mt-6 text-base leading-relaxed text-[#E3ECE7] sm:text-lg sm:leading-relaxed">
+            Her yıl 300’ün üzerinde mezun veren, ormandan endüstriye ve milli parklara kadar sahadaki teknik süreçlerin doğrudan muhatabı olan Orman Endüstri Mühendisleri olarak; 2026 KPSS atamalarında hak ettiğimiz istihdamı talep ediyoruz. Teknik gücümüzle sahada göreve hazırız.
+          </p>
+
+          <!-- Side-by-Side Action Buttons -->
+          <div class="mt-9 flex flex-col gap-3.5 sm:flex-row sm:items-center">
+            <a
+              href="#talepler"
+              class="inline-flex items-center justify-center gap-2 rounded-[4px] bg-white px-7 py-3.5 text-sm font-bold text-fir shadow-sm transition-all duration-200 hover:bg-gold hover:text-fir-dark"
+            >
+              <span>Taleplerimizi İncele</span>
+              <i data-lucide="arrow-right" class="h-4 w-4"></i>
+            </a>
+            <a
+              href="#iletisim"
+              class="inline-flex items-center justify-center gap-2 rounded-[4px] border border-white/75 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-200 hover:border-white hover:bg-white/15"
+            >
+              <span>Topluluğa Katıl</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- MICROSOFT-STYLE ELEVATED 3-COLUMN STAT QUICK-BAR          -->
+    <!-- ========================================================= -->
+    <section aria-label="Özet İstatistikler" class="relative z-10 -mt-12 px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid grid-cols-1 gap-px overflow-hidden rounded-md border border-[#E2E8E4] bg-[#E2E8E4] shadow-lg md:grid-cols-3">
+          <!-- Stat 1 -->
+          <div class="flex items-start gap-4 bg-white p-6 transition-colors hover:bg-sage/60 sm:p-7">
+            <div class="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-[4px] bg-fir-light text-fir">
+              <i data-lucide="building-2" class="h-5 w-5"></i>
+            </div>
+            <div>
+              <p class="text-2xl font-extrabold tracking-tight text-fir sm:text-3xl">250 Kadro</p>
+              <p class="mt-1 text-sm font-medium text-ink-muted">Orman Genel Müdürlüğü (OGM) Talebi</p>
+            </div>
+          </div>
+
+          <!-- Stat 2 -->
+          <div class="flex items-start gap-4 bg-white p-6 transition-colors hover:bg-sage/60 sm:p-7">
+            <div class="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-[4px] bg-fir-light text-fir">
+              <i data-lucide="trees" class="h-5 w-5"></i>
+            </div>
+            <div>
+              <p class="text-2xl font-extrabold tracking-tight text-fir sm:text-3xl">50 Kadro</p>
+              <p class="mt-1 text-sm font-medium text-ink-muted">Doğa Koruma ve Milli Parklar (DKMP) Talebi</p>
+            </div>
+          </div>
+
+          <!-- Stat 3 -->
+          <div class="flex items-start gap-4 bg-white p-6 transition-colors hover:bg-sage/60 sm:p-7">
+            <div class="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-[4px] bg-gold-soft text-gold-deep">
+              <i data-lucide="graduation-cap" class="h-5 w-5"></i>
+            </div>
+            <div>
+              <p class="text-2xl font-extrabold tracking-tight text-fir sm:text-3xl">300+ Mezun</p>
+              <p class="mt-1 text-sm font-medium text-ink-muted">Her Yıl Sahaya Hazır Genç Mühendis</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- 3. TALEPLERİMİZ (MICROSOFT FEATURED CARDS STYLE)          -->
+    <!-- ========================================================= -->
+    <section id="talepler" class="scroll-mt-16 bg-white py-20 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="max-w-3xl">
+          <p class="text-xs font-bold uppercase tracking-[0.14em] text-gold-deep">
+            Öne Çıkan Hedefler
+          </p>
+          <h2 class="mt-2 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+            Taleplerimiz
+          </h2>
+          <p class="mt-3 text-base leading-relaxed text-ink-muted">
+            Kamu kurumlarındaki teknik personel açığının giderilmesi ve orman kaynaklarımızın uzman mühendisler eliyle verimli değerlendirilmesi için somut taleplerimiz:
+          </p>
+        </div>
+
+        <!-- 2x2 Elevated Corporate Cards -->
+        <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
+          <!-- Card 1 -->
+          <article class="group flex flex-col overflow-hidden rounded-md border border-[#E4EAE6] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div class="h-1.5 w-full bg-fir"></div>
+            <div class="flex flex-1 flex-col p-8">
+              <div class="mb-5 flex items-center justify-between gap-3">
+                <span class="rounded-[4px] bg-fir-light px-3 py-1 text-xs font-bold tracking-[0.06em] text-fir">
+                  250 KADRO
+                </span>
+                <span class="text-sm font-bold text-ink-muted/60">01</span>
+              </div>
+              <h3 class="text-xl font-bold tracking-tight text-ink group-hover:text-fir transition-colors">
+                OGM Bünyesinde 250 Kadro
+              </h3>
+              <p class="mt-3 text-[15px] leading-relaxed text-ink-muted">
+                Orman Genel Müdürlüğü depolarında yeni geçilen barkodlu takip sistemi, odun standardizasyonu, üretim, tasnif ve pazarlama süreçlerindeki yoğun teknik iş yükünün karşılanması için 250 Orman Endüstri Mühendisi istihdamı talep ediyoruz.
+              </p>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="group flex flex-col overflow-hidden rounded-md border border-[#E4EAE6] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div class="h-1.5 w-full bg-fir"></div>
+            <div class="flex flex-1 flex-col p-8">
+              <div class="mb-5 flex items-center justify-between gap-3">
+                <span class="rounded-[4px] bg-fir-light px-3 py-1 text-xs font-bold tracking-[0.06em] text-fir">
+                  50 KADRO
+                </span>
+                <span class="text-sm font-bold text-ink-muted/60">02</span>
+              </div>
+              <h3 class="text-xl font-bold tracking-tight text-ink group-hover:text-fir transition-colors">
+                DKMP Bünyesinde 50 Kadro
+              </h3>
+              <p class="mt-3 text-[15px] leading-relaxed text-ink-muted">
+                Doğa Koruma ve Milli Parklar Genel Müdürlüğü bünyesindeki ahşap yapılar, mesire yerleri, ekoturizm tesisleri ve proje yönetimi süreçlerinin doğrudan alan uzmanları tarafından yürütülmesi için 50 Orman Endüstri Mühendisi kadrosu istiyoruz.
+              </p>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="group flex flex-col overflow-hidden rounded-md border border-[#E4EAE6] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div class="h-1.5 w-full bg-gold"></div>
+            <div class="flex flex-1 flex-col p-8">
+              <div class="mb-5 flex items-center justify-between gap-3">
+                <span class="rounded-[4px] bg-gold-soft px-3 py-1 text-xs font-bold tracking-[0.06em] text-gold-deep">
+                  ARALIK 2026
+                </span>
+                <span class="text-sm font-bold text-ink-muted/60">03</span>
+              </div>
+              <h3 class="text-xl font-bold tracking-tight text-ink group-hover:text-fir transition-colors">
+                Sürdürülebilir Alım Takvimi
+              </h3>
+              <p class="mt-3 text-[15px] leading-relaxed text-ink-muted">
+                Son 10 yılda yok denecek kadar az tutulan ve bugüne kadarki en yüksek alımda dahi 50 kişiyle sınırlı kalan istihdam mağduriyetinin giderilmesini; öncelikle Aralık 2026 döneminde, devamında ise 2027 bahar takviminde güçlü alım ilanları açılmasını bekliyoruz.
+              </p>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="group flex flex-col overflow-hidden rounded-md border border-[#E4EAE6] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div class="h-1.5 w-full bg-fir"></div>
+            <div class="flex flex-1 flex-col p-8">
+              <div class="mb-5 flex items-center justify-between gap-3">
+                <span class="rounded-[4px] bg-fir-light px-3 py-1 text-xs font-bold tracking-[0.06em] text-fir">
+                  SAHA UZMANLIĞI
+                </span>
+                <span class="text-sm font-bold text-ink-muted/60">04</span>
+              </div>
+              <h3 class="text-xl font-bold tracking-tight text-ink group-hover:text-fir transition-colors">
+                Uzmanlık Alanında Etkin İstihdam
+              </h3>
+              <p class="mt-3 text-[15px] leading-relaxed text-ink-muted">
+                Orman kaynaklarının katma değerli şekilde ekonomiye kazandırılması ve kamu verimliliğinin artırılması adına, ilgili teknik birimlerde Orman Endüstri Mühendislerinin kendi uzmanlık alanlarında görevlendirilmesini talep ediyoruz.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- FAQ: OEM Sahada Ne Yapar? -->
+        <div class="mt-16 border-t border-[#E5EAE7] pt-14">
+          <div class="max-w-3xl">
+            <p class="text-xs font-bold uppercase tracking-[0.14em] text-gold-deep">
+              Sıkça Sorulan Sorular
+            </p>
+            <h3 class="mt-2 text-2xl font-bold tracking-tight text-ink sm:text-3xl">
+              Orman Endüstri Mühendisi Sahada Ne Yapar?
+            </h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-muted sm:text-base">
+              Kamu kurumlarında ve orman kaynaklarının değerlendirilmesinde Orman Endüstri Mühendislerinin teknik uzmanlık alanı:
+            </p>
+          </div>
+
+          <div class="mt-8 space-y-3" id="faq-accordion">
+            <!-- FAQ 1 -->
+            <div class="overflow-hidden rounded-md border border-[#E4EAE6] bg-white shadow-sm">
+              <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-6 py-4 text-left transition-colors hover:bg-sage/60" aria-expanded="false">
+                <span class="text-sm font-bold text-ink sm:text-base">Orman Mühendisi ile Orman Endüstri Mühendisi arasındaki fark nedir?</span>
+                <span class="faq-chevron flex h-7 w-7 shrink-0 items-center justify-center rounded-[4px] bg-fir-light text-fir transition-transform duration-200">
+                  <i data-lucide="chevron-down" class="h-4 w-4"></i>
+                </span>
+              </button>
+              <div class="faq-panel hidden border-t border-[#EDF1EE] bg-[#FAFBF9] px-6 py-4 text-sm leading-relaxed text-ink-muted">
+                Orman Mühendisleri ormanın kurulması, bakımı, korunması ve yetiştirilmesi (silvikültür ve amenajman) süreçlerinden sorumludur. <strong class="font-semibold text-ink">Orman Endüstri Mühendisleri (OEM)</strong> ise ormandan elde edilen odun ve odun dışı ham maddenin standardizasyonu, depolanması, sınıflandırılması, işlenmesi, ahşap yapı/emprenye teknolojileri ve yüksek katma değerli ürün olarak ekonomiye kazandırılması süreçlerinin doğrudan teknik uzmanıdır.
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="overflow-hidden rounded-md border border-[#E4EAE6] bg-white shadow-sm">
+              <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-6 py-4 text-left transition-colors hover:bg-sage/60" aria-expanded="false">
+                <span class="text-sm font-bold text-ink sm:text-base">OGM depolarındaki barkodlu takip sisteminde OEM neden kritik rol oynar?</span>
+                <span class="faq-chevron flex h-7 w-7 shrink-0 items-center justify-center rounded-[4px] bg-fir-light text-fir transition-transform duration-200">
+                  <i data-lucide="chevron-down" class="h-4 w-4"></i>
+                </span>
+              </button>
+              <div class="faq-panel hidden border-t border-[#EDF1EE] bg-[#FAFBF9] px-6 py-4 text-sm leading-relaxed text-ink-muted">
+                Orman Genel Müdürlüğü (OGM) depolarında yeni geçilen barkodlu takip sistemi; tomruk ve emvallerin kalite sınıflandırması, ölçüm-tasnif hassasiyeti, stok yönetimi ve satış/pazarlama verimliliği açısından yoğun bir mühendislik iş yükü doğurmaktadır. Bu süreçlerin OEM’ler tarafından yürütülmesi hem değer kaybını önler hem de kamu gelirini artırır.
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="overflow-hidden rounded-md border border-[#E4EAE6] bg-white shadow-sm">
+              <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-6 py-4 text-left transition-colors hover:bg-sage/60" aria-expanded="false">
+                <span class="text-sm font-bold text-ink sm:text-base">DKMP bünyesinde Orman Endüstri Mühendisleri hangi görevleri üstlenir?</span>
+                <span class="faq-chevron flex h-7 w-7 shrink-0 items-center justify-center rounded-[4px] bg-fir-light text-fir transition-transform duration-200">
+                  <i data-lucide="chevron-down" class="h-4 w-4"></i>
+                </span>
+              </button>
+              <div class="faq-panel hidden border-t border-[#EDF1EE] bg-[#FAFBF9] px-6 py-4 text-sm leading-relaxed text-ink-muted">
+                Doğa Koruma ve Milli Parklar Genel Müdürlüğü (DKMP) sahalarındaki ahşap köprüler, gözlem kuleleri, seyir terasları, kır evleri, mesire yeri donatıları ve ekoturizm tesislerinin malzeme seçimi, emprenye/koruma teknolojileri, teknik şartname hazırlığı ve uzun ömürlü bakım planlamaları doğrudan Orman Endüstri Mühendisliği uzmanlık alanıdır.
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="overflow-hidden rounded-md border border-[#E4EAE6] bg-white shadow-sm">
+              <button type="button" class="faq-toggle flex w-full items-center justify-between gap-4 px-6 py-4 text-left transition-colors hover:bg-sage/60" aria-expanded="false">
+                <span class="text-sm font-bold text-ink sm:text-base">Aralık 2026 talebimiz neden OGM için 250, DKMP için 50 kadro?</span>
+                <span class="faq-chevron flex h-7 w-7 shrink-0 items-center justify-center rounded-[4px] bg-fir-light text-fir transition-transform duration-200">
+                  <i data-lucide="chevron-down" class="h-4 w-4"></i>
+                </span>
+              </button>
+              <div class="faq-panel hidden border-t border-[#EDF1EE] bg-[#FAFBF9] px-6 py-4 text-sm leading-relaxed text-ink-muted">
+                Türkiye genelindeki OGM bölge müdürlükleri ve işletme depolarındaki barkod/tasnif açığı ile DKMP’nin 81 ildeki korunan alan altyapı ihtiyaçları dikkate alındığında, 2016–2026 arasındaki toplam 79 kişilik sınırlı alım ve son 3 yıldaki sıfır genel mühendis kontenjanı sahada ciddi bir uzman açığı oluşturmuştur. 250 OGM + 50 DKMP talebi, her yıl mezun olan 300+ genç mühendisin sahaya dengeli ve verimli entegrasyonu için gerçekçi bir başlangıçtır.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- 4. BUGÜNE KADAR YAPTIKLARIMIZ (MODERN TIMELINE)           -->
+    <!-- ========================================================= -->
+    <section id="surec" class="scroll-mt-16 border-t border-[#E5EAE7] bg-sage py-20 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="max-w-3xl">
+          <p class="text-xs font-bold uppercase tracking-[0.14em] text-gold-deep">
+            Kurumsal Süreç
+          </p>
+          <h2 class="mt-2 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+            Bugüne Kadar Yaptıklarımız
+          </h2>
+          <p class="mt-3 text-base leading-relaxed text-ink-muted">
+            Haklı kadro talebimizi verilerle, kararlılıkla ve kurumsal zeminde duyurmak için attığımız adımlar:
+          </p>
+        </div>
+
+        <!-- Vertical Chronological Timeline -->
+        <div class="relative mt-12 max-w-4xl">
+          <!-- Vertical Connector Line -->
+          <div aria-hidden="true" class="absolute bottom-4 left-3.5 top-4 w-0.5 bg-[#D4DFD9] sm:left-5"></div>
+
+          <ol class="space-y-6">
+            <!-- Step 1 -->
+            <li class="relative pl-10 sm:pl-14">
+              <span aria-hidden="true" class="absolute left-[8px] top-8 h-3.5 w-3.5 rounded-full border-[3px] border-white bg-fir shadow-sm sm:left-[14px]"></span>
+              <div class="overflow-hidden rounded-md border border-[#E4EAE6] bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:p-8">
+                <span class="inline-block rounded-[4px] bg-fir-light px-3 py-1 text-xs font-bold text-fir">
+                  Eylül 2026
+                </span>
+                <h3 class="mt-3.5 text-lg font-bold tracking-tight text-ink sm:text-xl">
+                  Mezun Ağı ve Koordinasyonun Kurulması
+                </h3>
+                <p class="mt-2.5 text-[15px] leading-relaxed text-ink-muted">
+                  2026 KPSS sürecinin ardından Türkiye genelindeki Orman Endüstri Mühendisleri tek çatı altında toplandı. WhatsApp koordinasyon grupları ile <span class="font-semibold text-ink">@oemuhendisleri</span> sosyal medya kanalları aktif edilerek organize çalışma yapısı kuruldu.
+                </p>
+              </div>
+            </li>
+
+            <!-- Step 2 -->
+            <li class="relative pl-10 sm:pl-14">
+              <span aria-hidden="true" class="absolute left-[8px] top-8 h-3.5 w-3.5 rounded-full border-[3px] border-white bg-fir shadow-sm sm:left-[14px]"></span>
+              <div class="overflow-hidden rounded-md border border-[#E4EAE6] bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:p-8">
+                <span class="inline-block rounded-[4px] bg-fir-light px-3 py-1 text-xs font-bold text-fir">
+                  Ekim 2026
+                </span>
+                <h3 class="mt-3.5 text-lg font-bold tracking-tight text-ink sm:text-xl">
+                  Ankara Temasları (Beştepe ve OMO Ziyareti)
+                </h3>
+                <p class="mt-2.5 text-[15px] leading-relaxed text-ink-muted">
+                  Kamuda mühendis istihdamı ve saha ihtiyaçlarımızı doğrudan yetkililere aktarmak amacıyla Ankara’da Beştepe ve Orman Mühendisleri Odası (OMO) Genel Merkezi ziyaretleri gerçekleştirildi.
+                </p>
+              </div>
+            </li>
+
+            <!-- Step 3 -->
+            <li class="relative pl-10 sm:pl-14">
+              <span aria-hidden="true" class="absolute left-[8px] top-8 h-3.5 w-3.5 rounded-full border-[3px] border-white bg-fir shadow-sm sm:left-[14px]"></span>
+              <div class="overflow-hidden rounded-md border border-[#E4EAE6] bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:p-8">
+                <span class="inline-block rounded-[4px] bg-fir-light px-3 py-1 text-xs font-bold text-fir">
+                  Kasım 2026
+                </span>
+                <h3 class="mt-3.5 text-lg font-bold tracking-tight text-ink sm:text-xl">
+                  Dijital Kamuoyu ve Etkileşim İvmesi
+                </h3>
+                <p class="mt-2.5 text-[15px] leading-relaxed text-ink-muted">
+                  <span class="font-semibold text-fir">#OEMeKADRO</span> etiketiyle yürütülen düzenli X (Twitter) etkinlikleri, bilgilendirici görseller ve Reels kampanyalarıyla kısa sürede X’te 50000+, Instagram’da 100000+ görüntülenmeye ve 1.000+ organik takipçiye ulaşılarak güçlü bir kamuoyu oluşturuldu.
+                </p>
+              </div>
+            </li>
+
+            <!-- Step 4 -->
+            <li class="relative pl-10 sm:pl-14">
+              <span aria-hidden="true" class="absolute left-[8px] top-8 h-3.5 w-3.5 rounded-full border-[3px] border-white bg-fir shadow-sm sm:left-[14px]"></span>
+              <div class="overflow-hidden rounded-md border border-[#E4EAE6] bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:p-8">
+                <span class="inline-block rounded-[4px] bg-fir-light px-3 py-1 text-xs font-bold text-fir">
+                  22 Kasım 2026
+                </span>
+                <h3 class="mt-3.5 text-lg font-bold tracking-tight text-ink sm:text-xl">
+                  OMO Genel Başkanı ile Doğrudan İletişim
+                </h3>
+                <p class="mt-2.5 text-[15px] leading-relaxed text-ink-muted">
+                  OMO Genel Başkanı Sayın Hasan Türkyılmaz ile doğrudan iletişime geçilerek taleplerimiz ve sürecimiz aktarıldı. Odamızın genç meslektaşlarımızın mücadelesine yönelik destek mesajı ve randevu yönlendirmesi alındı.
+                </p>
+              </div>
+            </li>
+
+            <!-- Step 5 (Planned / Highlighted) -->
+            <li class="relative pl-10 sm:pl-14">
+              <span aria-hidden="true" class="absolute left-[8px] top-8 h-3.5 w-3.5 rounded-full border-[3px] border-white bg-gold shadow-sm sm:left-[14px]"></span>
+              <div class="overflow-hidden rounded-md border border-gold/45 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <div class="h-1.5 w-full bg-gold"></div>
+                <div class="p-7 sm:p-8">
+                  <span class="inline-block rounded-[4px] bg-gold-soft px-3 py-1 text-xs font-bold text-gold-deep">
+                    18 Aralık 2026 (Planlanan)
+                  </span>
+                  <h3 class="mt-3.5 text-lg font-bold tracking-tight text-ink sm:text-xl">
+                    Ankara Heyet Ziyareti ve Veri Dosyası Sunumu
+                  </h3>
+                  <p class="mt-2.5 text-[15px] leading-relaxed text-ink-muted">
+                    Türkiye’nin dört bir yanından katılacak meslektaşlarımızla OMO Genel Merkezi’ne geniş katılımlı heyet ziyareti düzenlenerek; son 10 yılın atama istatistiklerini, OGM barkod sistemi iş yükünü ve DKMP saha ihtiyaçlarını içeren kapsamlı sunum dosyası masaya konulacak.
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- 5. İSTİHDAM — KAMU İSTİHDAMI VE KPSS GERÇEĞİ              -->
+    <!-- ========================================================= -->
+    <section id="istihdam" class="scroll-mt-16 border-t border-[#E5EAE7] bg-white py-20 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <!-- Section Header Row with Kaynakça Button -->
+        <div class="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <div class="max-w-3xl">
+            <p class="text-xs font-bold uppercase tracking-[0.14em] text-gold-deep">
+              İstihdam
+            </p>
+            <h2 class="mt-2 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+              Kamu İstihdamı ve KPSS Gerçeği
+            </h2>
+            <p class="mt-4 text-base leading-relaxed text-ink-muted">
+              Orman Endüstri Mühendisliği (OEM) mezunları için kamuda yıllardır toplu, düzenli ve sürdürülebilir bir istihdam kapısı açılmamaktadır. ÖSYM merkezi KPSS yerleştirmelerinde OEM’ye (<strong class="font-semibold text-ink">nitelik kodu: 4869</strong>) yer verilmemekte; dışarıdan yapılan sınırlı alımlar yalnızca Orman Genel Müdürlüğü (OGM) bünyesinde dönemsel sözleşmeli (4/B) ilanlarla sınırlı kalmaktadır. <strong class="font-semibold text-ink">2024–2026 genel mühendis alımlarında ise OEM kontenjanı tamamen sıfırlanmıştır.</strong>
+            </p>
+          </div>
+
+          <div class="shrink-0">
+            <button
+              id="open-sources-btn"
+              type="button"
+              class="inline-flex items-center gap-2.5 rounded-[4px] border border-fir bg-white px-5 py-3 text-sm font-bold text-fir shadow-sm transition-all duration-200 hover:bg-fir hover:text-white focus:outline-none focus:ring-2 focus:ring-fir focus:ring-offset-2 focus:ring-offset-sage"
+            >
+              <i data-lucide="book-open-check" class="h-4 w-4"></i>
+              <span>Kaynakça</span>
+              <span class="rounded-[3px] bg-fir-light px-1.5 py-0.5 text-[11px] font-bold text-fir">15</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 4 Top KPI Summary Cards -->
+        <div class="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- KPI 1 -->
+          <div class="flex flex-col overflow-hidden rounded-md border border-[#E2E8E4] bg-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <div class="h-1 w-full bg-fir"></div>
+            <div class="flex flex-1 flex-col p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.08em] text-ink-muted">2016–2026 Toplam Dış Alım</p>
+              <p class="mt-2.5 text-3xl font-extrabold tracking-tight text-fir">79 Kadro</p>
+              <p class="mt-3 text-xs leading-relaxed text-ink-muted">
+                2019: 10, 2022: 50, 2023: 17 sözleşmeli 4/B; 2026: 2 Müfettiş Yardımcısı — tamamı OGM
+              </p>
+            </div>
+          </div>
+
+          <!-- KPI 2 -->
+          <div class="flex flex-col overflow-hidden rounded-md border border-[#E2E8E4] bg-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <div class="h-1 w-full bg-[#B91C1C]"></div>
+            <div class="flex flex-1 flex-col p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.08em] text-ink-muted">2024–2026 Genel Mühendis Alımı</p>
+              <p class="mt-2.5 text-3xl font-extrabold tracking-tight text-[#991B1B]">0 Kadro</p>
+              <p class="mt-3 text-xs leading-relaxed text-ink-muted">
+                2024’te 20 ve Mart 2025’te 150 kadro yalnızca Orman Mühendisine; Ocak 2026’da 20 kadro diğer mühendisliklere açıldı
+              </p>
+            </div>
+          </div>
+
+          <!-- KPI 3 -->
+          <div class="flex flex-col overflow-hidden rounded-md border border-[#E2E8E4] bg-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <div class="h-1 w-full bg-[#B91C1C]"></div>
+            <div class="flex flex-1 flex-col p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.08em] text-ink-muted">Merkezi KPSS (4869) Atamaları</p>
+              <p class="mt-2.5 text-3xl font-extrabold tracking-tight text-[#991B1B]">0 Kadro</p>
+              <p class="mt-3 text-xs leading-relaxed text-ink-muted">
+                2024/1, 2024/2, 2025/1, 2025/2 ve 2026/1 dahil açık ÖSYM tablolarında atama kaydı yok
+              </p>
+            </div>
+          </div>
+
+          <!-- KPI 4 -->
+          <div class="flex flex-col overflow-hidden rounded-md border border-[#E2E8E4] bg-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md">
+            <div class="h-1 w-full bg-gold"></div>
+            <div class="flex flex-1 flex-col p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.08em] text-ink-muted">2023 Sözleşmeli Alım KPSS P3 Aralığı</p>
+              <p class="mt-2.5 text-2xl font-extrabold tracking-tight text-fir sm:text-[1.75rem]">75,45 – 84,12</p>
+              <p class="mt-3 text-xs leading-relaxed text-ink-muted">
+                Taban: Kütahya 75,45173 | Tavan: Mersin 84,1187
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Annual External Recruitment Bar Chart (2019-2026) -->
+        <div class="mt-10 overflow-hidden rounded-md border border-[#E2E8E4] bg-white p-6 shadow-sm sm:p-7">
+          <div class="flex flex-col justify-between gap-2 sm:flex-row sm:items-center">
+            <div>
+              <h3 class="text-base font-bold tracking-tight text-ink sm:text-lg">
+                Yıllara Göre Resmi Dış Alım Grafiği (2019–2026)
+              </h3>
+              <p class="mt-0.5 text-xs text-ink-muted">
+                Doğrulanmış yıllık OEM dış alım kontenjanları (2025’teki 25 kurum içi unvan değişikliği hariçtir).
+              </p>
+            </div>
+            <div class="flex flex-wrap items-center gap-3 text-[11px] font-semibold text-ink-muted">
+              <span class="inline-flex items-center gap-1.5"><span class="h-2.5 w-2.5 rounded-[2px] bg-fir"></span>4/B Sözleşmeli</span>
+              <span class="inline-flex items-center gap-1.5"><span class="h-2.5 w-2.5 rounded-[2px] bg-gold"></span>Müfettiş Yrd.</span>
+              <span class="inline-flex items-center gap-1.5"><span class="h-2.5 w-2.5 rounded-[2px] bg-[#DC2626]"></span>0 Kadro</span>
+            </div>
+          </div>
+
+          <div class="mt-8 grid h-52 grid-cols-8 items-end gap-2 border-b border-[#E5EAE7] pb-2 sm:gap-4">
+            <!-- 2019: 10 -->
+            <div class="flex h-full flex-col items-center justify-end gap-1.5">
+              <span class="text-xs font-bold text-fir">10</span>
+              <div class="w-full max-w-[44px] rounded-t-[4px] bg-fir-mid/85 transition-all hover:bg-fir" style="height: 20%;"></div>
+            </div>
+            <!-- 2020: 0 -->
+            <div class="flex h-full flex-col items-center justify-end gap-1.5">
+              <span class="text-xs font-bold text-[#991B1B]">0</span>
+              <div class="h-1 w-full max-w-[44px] rounded-full bg-[#FCA5A5]"></div>
+            </div>
+            <!-- 2021: 0 -->
+            <div class="flex h-full flex-col items-center justify-end gap-1.5">
+              <span class="text-xs font-bold text-[#991B1B]">0</span>
+              <div class="h-1 w-full max-w-[44px] rounded-full bg-[#FCA5A5]"></div>
+            </div>
+            <!-- 2022: 50 -->
+            <div class="flex h-full flex-col items-center justify-end gap-1.5">
+              <span class="text-xs font-extrabold text-fir">50</span>
+              <div class="w-full max-w-[44px] rounded-t-[4px] bg-fir transition-all hover:bg-fir-dark" style="height: 100%;"></div>
+            </div>
+            <!-- 2023: 17 -->
+            <div class="flex h-full flex-col items-center justify-end gap-1.5">
+              <span class="text-xs font-bold text-fir">17</span>
+              <div class="w-full max-w-[44px] rounded-t-[4px] bg-fir-mid transition-all hover:bg-fir" style="height: 34%;"></div>
+            </div>
+            <!-- 2024: 0 -->
+            <div class="flex h-full flex-col items-center justify-end gap-1.5">
+              <span class="text-xs font-bold text-[#991B1B]">0</span>
+              <div class="h-1.5 w-full max-w-[44px] rounded-full bg-[#DC2626]"></div>
+            </div>
+            <!-- 2025: 0 -->
+            <div class="flex h-full flex-col items-center justify-end gap-1.5">
+              <span class="text-xs font-bold text-[#991B1B]">0</span>
+              <div class="h-1.5 w-full max-w-[44px] rounded-full bg-[#DC2626]"></div>
+            </div>
+            <!-- 2026: 2 -->
+            <div class="flex h-full flex-col items-center justify-end gap-1.5">
+              <span class="text-xs font-bold text-gold-deep">2</span>
+              <div class="w-full max-w-[44px] rounded-t-[4px] bg-gold transition-all hover:bg-gold-deep" style="height: 6%;"></div>
+            </div>
+          </div>
+
+          <div class="mt-2.5 grid grid-cols-8 gap-2 text-center text-[11px] font-semibold text-ink-muted sm:gap-4 sm:text-xs">
+            <span>2019</span>
+            <span>2020</span>
+            <span>2021</span>
+            <span class="font-bold text-fir">2022</span>
+            <span>2023</span>
+            <span class="font-bold text-[#991B1B]">2024</span>
+            <span class="font-bold text-[#991B1B]">2025*</span>
+            <span>2026</span>
+          </div>
+        </div>
+
+        <!-- Year-by-Year Public Recruitment Table (2016-2026) -->
+        <div class="mt-8 overflow-hidden rounded-md border border-[#E2E8E4] bg-white shadow-sm">
+          <div class="flex flex-col justify-between gap-2 border-b border-[#E5EAE7] bg-white px-6 py-5 sm:flex-row sm:items-center">
+            <div>
+              <h3 class="text-lg font-bold tracking-tight text-ink">
+                Yıl Bazında Kamu Alımları Tablosu (2016–2026)
+              </h3>
+              <p class="mt-0.5 text-xs text-ink-muted">
+                Resmi ilanlar ve açık ÖSYM / OGM kayıtları esas alınarak derlenmiştir.
+              </p>
+            </div>
+            <span class="inline-flex w-fit items-center rounded-[4px] bg-fir-light px-2.5 py-1 text-[11px] font-bold text-fir">
+              Doğrulanmış Resmi Veriler
+            </span>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full min-w-[720px] border-collapse text-left text-sm">
+              <thead>
+                <tr class="border-b border-[#E5EAE7] bg-[#F8FAF8] text-xs font-bold uppercase tracking-wider text-ink-muted">
+                  <th scope="col" class="px-6 py-3.5">Dönem</th>
+                  <th scope="col" class="px-6 py-3.5">Kurum ve Alım Türü</th>
+                  <th scope="col" class="px-6 py-3.5 text-center">OEM Kontenjanı</th>
+                  <th scope="col" class="px-6 py-3.5">KPSS P3 / Sınav Koşulu</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-[#EDF1EE] text-ink">
+                <tr class="transition-colors hover:bg-sage/60">
+                  <td class="whitespace-nowrap px-6 py-4 font-semibold text-ink">2016–2018</td>
+                  <td class="px-6 py-4">Merkezi KPSS / OGM Sözleşmeli</td>
+                  <td class="whitespace-nowrap px-6 py-4 text-center">
+                    <span class="inline-flex rounded-[4px] bg-[#EEF1EF] px-2.5 py-0.5 text-xs font-semibold text-ink-muted">Doğrulanamadı</span>
+                  </td>
+                  <td class="px-6 py-4 text-ink-muted">Çevrimiçi açık arşivlerde OEM ilanı yok</td>
+                </tr>
+                <tr class="transition-colors hover:bg-sage/60">
+                  <td class="whitespace-nowrap px-6 py-4 font-semibold text-ink">Eylül 2019</td>
+                  <td class="px-6 py-4">OGM 5.000 Personel Alımı (4/B Taşra)</td>
+                  <td class="whitespace-nowrap px-6 py-4 text-center">
+                    <span class="inline-flex rounded-[4px] bg-fir-light px-2.5 py-0.5 text-xs font-bold text-fir">10</span>
+                  </td>
+                  <td class="px-6 py-4 text-ink-muted">KPSS B Grubu (sonuç puan cetveli yayımlı değil)</td>
+                </tr>
+                <tr class="transition-colors hover:bg-sage/60">
+                  <td class="whitespace-nowrap px-6 py-4 font-semibold text-ink">2020–2021</td>
+                  <td class="px-6 py-4">Merkezi KPSS / OGM Sözleşmeli</td>
+                  <td class="whitespace-nowrap px-6 py-4 text-center">
+                    <span class="inline-flex rounded-[4px] bg-[#FEE2E2] px-2.5 py-0.5 text-xs font-bold text-[#991B1B]">0</span>
+                  </td>
+                  <td class="px-6 py-4 text-ink-muted">Yeni OEM alım ilanı açılmadı</td>
+                </tr>
+                <tr class="transition-colors hover:bg-sage/60">
+                  <td class="whitespace-nowrap px-6 py-4 font-semibold text-ink">Mart 2022</td>
+                  <td class="px-6 py-4">OGM Sözleşmeli Mühendis (4/B Taşra, 43 il)</td>
+                  <td class="whitespace-nowrap px-6 py-4 text-center">
+                    <span class="inline-flex rounded-[4px] bg-fir px-2.5 py-0.5 text-xs font-bold text-white">50</span>
+                  </td>
+                  <td class="px-6 py-4 text-ink-muted">2020-KPSSP3 ≥ 70 (yazılı/sözlü sınavsız; puan cetveli yayımlanmadı)</td>
+                </tr>
+                <tr class="transition-colors hover:bg-sage/60">
+                  <td class="whitespace-nowrap px-6 py-4 font-semibold text-ink">2023</td>
+                  <td class="px-6 py-4">OGM 109 Sözleşmeli Personel (4/B Taşra, 14 il)</td>
+                  <td class="whitespace-nowrap px-6 py-4 text-center">
+                    <span class="inline-flex rounded-[4px] bg-fir-light px-2.5 py-0.5 text-xs font-bold text-fir">17</span>
+                  </td>
+                  <td class="px-6 py-4 font-medium text-ink">KPSSP3 75,45173 – 84,1187</td>
+                </tr>
+                <tr class="transition-colors hover:bg-sage/60">
+                  <td class="whitespace-nowrap px-6 py-4 font-semibold text-ink">2024</td>
+                  <td class="px-6 py-4">OGM 20 Sözleşmeli Mühendis (4/B)</td>
+                  <td class="whitespace-nowrap px-6 py-4 text-center">
+                    <span class="inline-flex rounded-[4px] bg-[#FEE2E2] px-2.5 py-0.5 text-xs font-bold text-[#991B1B]">0</span>
+                  </td>
+                  <td class="px-6 py-4 text-ink-muted">Yalnızca Orman Mühendisliği mezunlarına açıldı</td>
+                </tr>
+                <tr class="transition-colors hover:bg-sage/60">
+                  <td class="whitespace-nowrap px-6 py-4 font-semibold text-ink">Mart 2025</td>
+                  <td class="px-6 py-4">OGM 150 Sözleşmeli Mühendis (4/B)</td>
+                  <td class="whitespace-nowrap px-6 py-4 text-center">
+                    <span class="inline-flex rounded-[4px] bg-[#FEE2E2] px-2.5 py-0.5 text-xs font-bold text-[#991B1B]">0</span>
+                  </td>
+                  <td class="px-6 py-4 text-ink-muted">Yalnızca Orman Mühendisliği mezunlarına açıldı</td>
+                </tr>
+                <tr class="transition-colors hover:bg-sage/60">
+                  <td class="whitespace-nowrap px-6 py-4 font-semibold text-ink">2025</td>
+                  <td class="px-6 py-4">OGM Kurum İçi Unvan Değişikliği</td>
+                  <td class="whitespace-nowrap px-6 py-4 text-center">
+                    <span class="inline-flex rounded-[4px] bg-gold-soft px-2.5 py-0.5 text-xs font-bold text-gold-deep">25</span>
+                  </td>
+                  <td class="px-6 py-4 text-ink-muted">Yazılı + sözlü sınav (dış alım değil, 223 kadro içi)</td>
+                </tr>
+                <tr class="transition-colors hover:bg-sage/60">
+                  <td class="whitespace-nowrap px-6 py-4 font-semibold text-ink">Ocak 2026</td>
+                  <td class="px-6 py-4">OGM 496 Sözleşmeli Personel (20 Mühendis)</td>
+                  <td class="whitespace-nowrap px-6 py-4 text-center">
+                    <span class="inline-flex rounded-[4px] bg-[#FEE2E2] px-2.5 py-0.5 text-xs font-bold text-[#991B1B]">0</span>
+                  </td>
+                  <td class="px-6 py-4 text-ink-muted">Diğer mühendislik dalları (Bilgisayar, Harita, İnşaat vb.)</td>
+                </tr>
+                <tr class="transition-colors hover:bg-sage/60">
+                  <td class="whitespace-nowrap px-6 py-4 font-semibold text-ink">Kasım 2026</td>
+                  <td class="px-6 py-4">OGM Müfettiş Yardımcılığı (Merkez, 8. Der. GİH)</td>
+                  <td class="whitespace-nowrap px-6 py-4 text-center">
+                    <span class="inline-flex rounded-[4px] bg-fir-light px-2.5 py-0.5 text-xs font-bold text-fir">2</span>
+                  </td>
+                  <td class="px-6 py-4 text-ink-muted">KPSSP3 ≥ 75 (12 kadronun 2’si OEM; 13 OEM adayı yazılıda)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Critical Turning Points (Timeline Component) -->
+        <div class="mt-12">
+          <h3 class="text-xl font-bold tracking-tight text-ink">
+            Kritik Kırılma Noktaları
+          </h3>
+          <div class="mt-6 grid grid-cols-1 gap-5 lg:grid-cols-3">
+            <!-- Milestone 1 -->
+            <div class="relative overflow-hidden rounded-md border border-[#E2E8E4] bg-white p-6 shadow-sm">
+              <div class="mb-3 inline-flex items-center gap-2 rounded-[4px] bg-fir-light px-2.5 py-1 text-xs font-bold text-fir">
+                <span>2022–2023</span>
+              </div>
+              <h4 class="text-base font-bold text-ink">
+                Kısa Açılım ve Daralma
+              </h4>
+              <p class="mt-2.5 text-sm leading-relaxed text-ink-muted">
+                2022’de 43 ile yayılan <strong class="font-semibold text-ink">50 kişilik</strong> sözleşmeli alım (Kastamonu 4; Adana, Balıkesir, Bolu, Sinop 2’şer; 38 il 1’er kadro) son 10 yılın tek geniş kapsamlı alımı oldu. 2023’te kontenjan <strong class="font-semibold text-ink">17’ye</strong> düştü (14 il; Kastamonu 3, Bolu 2, 12 il 1’er kadro).
+              </p>
+            </div>
+
+            <!-- Milestone 2 -->
+            <div class="relative overflow-hidden rounded-md border border-[#E2E8E4] bg-white p-6 shadow-sm">
+              <div class="mb-3 inline-flex items-center gap-2 rounded-[4px] bg-[#FEE2E2] px-2.5 py-1 text-xs font-bold text-[#991B1B]">
+                <span>2024–2026</span>
+              </div>
+              <h4 class="text-base font-bold text-ink">
+                Genel Mühendis Alımlarında Sıfırlanma
+              </h4>
+              <p class="mt-2.5 text-sm leading-relaxed text-ink-muted">
+                2024’te 20 ve Mart 2025’te 150 sözleşmeli mühendis kadrosu yalnızca Orman Mühendislerine, Ocak 2026’daki 20 mühendis kadrosu ise diğer branşlara ayrıldı.
+              </p>
+            </div>
+
+            <!-- Milestone 3 -->
+            <div class="relative overflow-hidden rounded-md border border-[#E2E8E4] bg-white p-6 shadow-sm">
+              <div class="mb-3 inline-flex items-center gap-2 rounded-[4px] bg-gold-soft px-2.5 py-1 text-xs font-bold text-gold-deep">
+                <span>2025–2026</span>
+              </div>
+              <h4 class="text-base font-bold text-ink">
+                Sınırlı Kurum İçi ve Kariyer Kanalı
+              </h4>
+              <p class="mt-2.5 text-sm leading-relaxed text-ink-muted">
+                Dışarıdan genel mühendis alımı dururken yalnızca kurum içi Unvan Değişikliği (25 kadro) ve merkez teşkilatta Müfettiş Yardımcılığı (2 kadro) açıldı.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2023 OGM Province-Based KPSS P3 Scores (Collapsible Accordion) -->
+        <div class="mt-10 overflow-hidden rounded-md border border-[#E2E8E4] bg-white shadow-sm">
+          <button
+            id="kpss-2023-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="kpss-2023-panel"
+            class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition-colors hover:bg-sage/60 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-fir"
+          >
+            <div>
+              <h3 class="text-base font-bold tracking-tight text-ink sm:text-lg">
+                2023 OGM Ataması İl Bazlı KPSS P3 Taban–Tavan Puanları (14 İl, 17 Kadro)
+              </h3>
+              <p class="mt-1 text-xs text-ink-muted">
+                Not: 2016–2026 döneminde il bazlı kesin KPSS P3 puan cetveli yalnızca 2023 alımında yayımlanmıştır.
+              </p>
+            </div>
+            <span id="kpss-2023-chevron" class="flex h-8 w-8 shrink-0 items-center justify-center rounded-[4px] bg-fir-light text-fir transition-transform duration-200">
+              <i data-lucide="chevron-down" class="h-4 w-4"></i>
+            </span>
+          </button>
+
+          <div id="kpss-2023-panel" class="hidden border-t border-[#E5EAE7]">
+            <div class="overflow-x-auto">
+              <table class="w-full min-w-[540px] border-collapse text-left text-sm">
+                <thead>
+                  <tr class="border-b border-[#E5EAE7] bg-[#F8FAF8] text-xs font-bold uppercase tracking-wider text-ink-muted">
+                    <th scope="col" class="px-6 py-3">İl (Taşra)</th>
+                    <th scope="col" class="px-6 py-3 text-center">Kontenjan</th>
+                    <th scope="col" class="px-6 py-3 text-right">En Düşük KPSS P3</th>
+                    <th scope="col" class="px-6 py-3 text-right">En Yüksek KPSS P3</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-[#EDF1EE] text-ink">
+                  <tr class="hover:bg-sage/50">
+                    <td class="px-6 py-3 font-medium">Mersin</td>
+                    <td class="px-6 py-3 text-center">1</td>
+                    <td class="px-6 py-3 text-right font-mono text-xs sm:text-sm">84,1187</td>
+                    <td class="px-6 py-3 text-right font-mono text-xs sm:text-sm font-semibold text-fir">84,1187</td>
+                  </tr>
+                  <tr class="hover:bg-sage/50">
+                    <td class="px-6 py-3 font-medium">Balıkesir</td>
+                    <td class="px-6 py-3 text-center">1</td>
+                    <td class="px-6 py-3 text-right font-mono text-xs sm:text-sm">83,70085</td>
+                    <td class="px-6 py-3 text-right font-mono text-xs sm:text-sm">83,70085</td>
+                  </tr>
+                  <tr class="hover:bg-sage/50">
+                    <td class="px-6 py-3 font-medium">Denizli</td>
+                    <td class="px-6 py-3 text-center">1</td>
+                    <td class="px-6 py-3 text-right font-mono text-xs sm:text-sm">80,22033</td>
+                    <td class="px-6 py-3 text-right font-mono text-xs sm:text-sm">80,22033</td>
+                  </tr>
+                  <tr class="hover:bg-sage/50">
+                    <td class="px-6 py-3 font-medium">Kahramanmaraş</td>
+                    <td class="px-6 py-3 text-center">1</td>
+                    <td class="px-6 py-3 text-right font-mono text-xs sm:text-sm">78,50717</td>
+                    <td class="px-6 py-3 text-right font-mono text-xs sm:text-sm">78,50717</td>
+                  </tr>
+                  <tr class="hover:bg-sage/50">
+                    <td class="px-6 py-3 font-medium">Ordu</td>
+                    <td class="px-6 py-3 text-center">1</td>
+                    <td class="px-6 py-3 text-right font-mono text-xs sm:text-sm">78,48351</td>
+                    <td class="px-6 py-3 text-right font-mono text-xs sm:text-sm">78,48351</td>
+                  </tr>
+                  <tr class="hover:bg-sage/50">
+                    <td class="px-6 py-3 font-medium">Zonguldak</td>
+                    <td class="px-6 py-3 text-center">1</td>
+                    <td class="px-6 py-3 text-right font-mono text-xs sm:text-sm">78,30579</td>
+                    <td class="px-6 py-3 text-right font-mono text-xs sm:text-sm">78,30579</td>
+                  </tr>
+                  <tr class="hover:bg-sage/50">
+                    <td class="px-6 py-3 font-medium">Bolu</td>
+                    <td class="px-6 py-3 text-center font-semibold">2</td>
+                    <td class="px-6 py-3 text-right font-mono text-xs sm:text-sm">77,85837</td>
+                    <td class="px-6 py-3 text-right font-mono text-xs sm:text-sm">78,1987</td>
+                  </tr>
+                  <tr class="hover:bg-sage/50">
+                    <td class="px-6 py-3 font-medium">Muğla</td>
+                    <td class="px-6 py-3 text-center">1</td>
+                    <td class="px-6 py-3 text-right font-mono text-xs sm:text-sm">77,72532</td>
+                    <td class="px-6 py-3 text-right font-mono text-xs sm:text-sm">77,72532</td>
+                  </tr>
+                  <tr class="hover:bg-sage/50">
+                    <td class="px-6 py-3 font-medium">Manisa</td>
+                    <td class="px-6 py-3 text-center">1</td>
+                    <td class="px-6 py-3 text-right font-mono text-xs sm:text-sm">77,7089</td>
+                    <td class="px-6 py-3 text-right font-mono text-xs sm:text-sm">77,7089</td>
+                  </tr>
+                  <tr class="hover:bg-sage/50">
+                    <td class="px-6 py-3 font-medium">Sinop</td>
+                    <td class="px-6 py-3 text-center">1</td>
+                    <td class="px-6 py-3 text-right font-mono text-xs sm:text-sm">77,3344</td>
+                    <td class="px-6 py-3 text-right font-mono text-xs sm:text-sm">77,3344</td>
+                  </tr>
+                  <tr class="hover:bg-sage/50">
+                    <td class="px-6 py-3 font-medium">Kırıkkale</td>
+                    <td class="px-6 py-3 text-center">1</td>
+                    <td class="px-6 py-3 text-right font-mono text-xs sm:text-sm">76,67738</td>
+                    <td class="px-6 py-3 text-right font-mono text-xs sm:text-sm">76,67738</td>
+                  </tr>
+                  <tr class="hover:bg-sage/50">
+                    <td class="px-6 py-3 font-medium">Samsun</td>
+                    <td class="px-6 py-3 text-center">1</td>
+                    <td class="px-6 py-3 text-right font-mono text-xs sm:text-sm">76,5243</td>
+                    <td class="px-6 py-3 text-right font-mono text-xs sm:text-sm">76,5243</td>
+                  </tr>
+                  <tr class="hover:bg-sage/50">
+                    <td class="px-6 py-3 font-medium">Kastamonu</td>
+                    <td class="px-6 py-3 text-center font-semibold">3</td>
+                    <td class="px-6 py-3 text-right font-mono text-xs sm:text-sm">75,75199</td>
+                    <td class="px-6 py-3 text-right font-mono text-xs sm:text-sm">75,99212</td>
+                  </tr>
+                  <tr class="hover:bg-sage/50">
+                    <td class="px-6 py-3 font-medium">Kütahya</td>
+                    <td class="px-6 py-3 text-center">1</td>
+                    <td class="px-6 py-3 text-right font-mono text-xs sm:text-sm font-semibold text-gold-deep">75,45173</td>
+                    <td class="px-6 py-3 text-right font-mono text-xs sm:text-sm">75,45173</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data Transparency Callout Box -->
+        <div class="mt-8 rounded-md border border-[#D8E2DC] border-l-4 border-l-fir bg-white p-6 shadow-sm sm:p-7">
+          <div class="flex items-start gap-4">
+            <span class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-[4px] bg-fir-light text-fir">
+              <i data-lucide="info" class="h-5 w-5"></i>
+            </span>
+            <div>
+              <h3 class="text-base font-bold text-ink">
+                Kamuda Aktif Çalışan Net OEM Sayısı Neden Bilinmiyor?
+              </h3>
+              <p class="mt-2 text-sm leading-relaxed text-ink-muted">
+                OGM Standart Kadro Yönergesi <code class="rounded bg-sage px-1.5 py-0.5 font-mono text-xs font-semibold text-fir">ORMAN ENDÜSTRİ MÜHENDİSİ (8500-2)</code> kadrosunu ayrı tanımlasa da Sayıştay OGM Raporu (31.12.2024: toplam 42.079 personel; 19.932 memur, 1.837 sözleşmeli) ve Sayıştay Tarım ve Orman Bakanlığı Raporu (31.12.2025: toplam 61.465 personel; 29.314 Teknik Hizmetler Sınıfı) aktif personeli branş kırılımıyla yayımlamamaktadır. Bu nedenle kamuda aktif görevdeki net OEM sayısı açık kaynaklardan ayrıştırılamamaktadır.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- 6. PAYLAŞIMLAR — KAMPANYA PAYLAŞIMLARIMIZ                 -->
+    <!-- ========================================================= -->
+    <section id="paylasimlar" class="scroll-mt-16 border-t border-[#E5EAE7] bg-sage py-20 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <div class="max-w-3xl">
+            <p class="text-xs font-bold uppercase tracking-[0.14em] text-gold-deep">
+              Paylaşımlar
+            </p>
+            <h2 class="mt-2 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+              Kampanya Paylaşımlarımız
+            </h2>
+            <p class="mt-3 text-base leading-relaxed text-ink-muted">
+              <span class="font-semibold text-ink">@oemuhendisleri</span> resmi Instagram hesabımızdan öne çıkan kampanya içerikleri ve bilgilendirme paylaşımları:
+            </p>
+          </div>
+          <div class="shrink-0">
+            <button
+              type="button"
+              data-open-tweets
+              class="inline-flex items-center gap-2.5 rounded-[4px] bg-[#0F1419] px-5 py-3 text-sm font-bold text-white shadow-sm transition-all duration-200 hover:bg-fir focus:outline-none focus:ring-2 focus:ring-fir focus:ring-offset-2 focus:ring-offset-sage"
+            >
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+              <span>Hazır Paylaşım Şablonu</span>
+              <span class="rounded-[3px] bg-white/15 px-1.5 py-0.5 text-[11px] font-bold text-gold">15</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 3-Column Instagram Showcase Grid -->
+        <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
+          <!-- Post 1: OMO Ziyareti -->
+          <article class="group flex flex-col overflow-hidden rounded-xl border border-[#E4EAE6] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div class="flex items-center justify-between border-b border-[#EDF1EE] px-4 py-3">
+              <div class="flex items-center gap-2.5">
+                <span class="flex h-7 w-7 items-center justify-center rounded-md bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF] text-white">
+                  <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                  </svg>
+                </span>
+                <span class="text-xs font-bold text-ink">@oemuhendisleri</span>
+              </div>
+              <span class="rounded-[4px] bg-fir-light px-2 py-0.5 text-[11px] font-semibold text-fir">OMO Ziyareti</span>
+            </div>
+            <button
+              type="button"
+              data-lightbox-src="./images/post-1.jpg"
+              data-lightbox-caption="Ankara temaslarımız kapsamında Orman Mühendisleri Odası (OMO) Genel Merkezi’nde kadro taleplerimizi ve saha ihtiyaçlarımızı aktardık."
+              data-lightbox-link="https://www.instagram.com/oemuhendisleri/p/DfxXw-li0NP/"
+              class="relative block aspect-[4/5] w-full cursor-zoom-in overflow-hidden bg-fir text-left focus:outline-none"
+              aria-label="OMO Ziyareti fotoğrafını büyüt"
+            >
+              <img
+                src="./images/post-1.jpg"
+                alt=""
+                aria-hidden="true"
+                class="pointer-events-none absolute inset-0 h-full w-full scale-110 object-cover opacity-35 blur-md"
+              />
+              <img
+                src="./images/post-1.jpg"
+                alt="Orman Mühendisleri Odası Genel Merkezi ziyareti"
+                loading="lazy"
+                class="relative z-10 h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+              />
+              <span class="absolute right-3 top-3 z-20 inline-flex items-center gap-1 rounded-[4px] bg-black/55 px-2.5 py-1 text-[11px] font-semibold text-white backdrop-blur-sm opacity-85 transition-opacity group-hover:opacity-100">
+                <i data-lucide="zoom-in" class="h-3.5 w-3.5"></i>
+                Büyüt
+              </span>
+            </button>
+            <div class="flex flex-1 flex-col justify-between p-5">
+              <p class="text-sm leading-relaxed text-ink-muted">
+                Ankara temaslarımız kapsamında Orman Mühendisleri Odası (OMO) Genel Merkezi’nde kadro taleplerimizi ve saha ihtiyaçlarımızı aktardık.
+              </p>
+              <a
+                href="https://www.instagram.com/oemuhendisleri/p/DfxXw-li0NP/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-4 inline-flex items-center justify-between border-t border-[#EDF1EE] pt-3.5 text-xs font-bold text-fir transition-colors hover:text-gold-deep"
+              >
+                <span>Gönderiye Git</span>
+                <span>Instagram'da Görüntüle ↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Post 2: DKMP Emprenye ve Malzeme Koruma -->
+          <article class="group flex flex-col overflow-hidden rounded-xl border border-[#E4EAE6] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div class="flex items-center justify-between border-b border-[#EDF1EE] px-4 py-3">
+              <div class="flex items-center gap-2.5">
+                <span class="flex h-7 w-7 items-center justify-center rounded-md bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF] text-white">
+                  <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                  </svg>
+                </span>
+                <span class="text-xs font-bold text-ink">@oemuhendisleri</span>
+              </div>
+              <span class="rounded-[4px] bg-fir-light px-2 py-0.5 text-[11px] font-semibold text-fir">DKMP Kampanyası</span>
+            </div>
+            <button
+              type="button"
+              data-lightbox-src="./images/post-2.jpg"
+              data-lightbox-caption="DKMP bünyesindeki ahşap yapılar, malzeme koruma ve emprenye teknolojilerinde alan uzmanlarımızla göreve hazırız."
+              data-lightbox-link="https://www.instagram.com/oemuhendisleri/p/Df5AKYoCkR6/"
+              class="relative block aspect-[4/5] w-full cursor-zoom-in overflow-hidden bg-fir text-left focus:outline-none"
+              aria-label="DKMP kampanya afişini büyüt"
+            >
+              <img
+                src="./images/post-2.jpg"
+                alt="DKMP Orman Endüstri Mühendisleri Malzeme Koruma ve Emprenye Teknolojileri kampanya görseli"
+                loading="lazy"
+                class="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
+              />
+              <span class="absolute right-3 top-3 z-20 inline-flex items-center gap-1 rounded-[4px] bg-black/55 px-2.5 py-1 text-[11px] font-semibold text-white backdrop-blur-sm opacity-85 transition-opacity group-hover:opacity-100">
+                <i data-lucide="zoom-in" class="h-3.5 w-3.5"></i>
+                Büyüt
+              </span>
+            </button>
+            <div class="flex flex-1 flex-col justify-between p-5">
+              <p class="text-sm leading-relaxed text-ink-muted">
+                DKMP bünyesindeki ahşap yapılar, malzeme koruma ve emprenye teknolojilerinde alan uzmanlarımızla göreve hazırız.
+              </p>
+              <a
+                href="https://www.instagram.com/oemuhendisleri/p/Df5AKYoCkR6/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-4 inline-flex items-center justify-between border-t border-[#EDF1EE] pt-3.5 text-xs font-bold text-fir transition-colors hover:text-gold-deep"
+              >
+                <span>Gönderiye Git</span>
+                <span>Instagram'da Görüntüle ↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Post 3: OGM 250 + DKMP 50 Kadro Çağrısı -->
+          <article class="group flex flex-col overflow-hidden rounded-xl border border-[#E4EAE6] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div class="flex items-center justify-between border-b border-[#EDF1EE] px-4 py-3">
+              <div class="flex items-center gap-2.5">
+                <span class="flex h-7 w-7 items-center justify-center rounded-md bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF] text-white">
+                  <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                  </svg>
+                </span>
+                <span class="text-xs font-bold text-ink">@oemuhendisleri</span>
+              </div>
+              <span class="rounded-[4px] bg-gold-soft px-2 py-0.5 text-[11px] font-semibold text-gold-deep">#OEMeKADRO</span>
+            </div>
+            <button
+              type="button"
+              data-lightbox-src="./images/post-3.jpg"
+              data-lightbox-caption="OGM’de 250, DKMP’de 50 kadro talebimizle Aralık atamalarında sahada göreve hazırız. #OEMeKADRO"
+              data-lightbox-link="https://www.instagram.com/oemuhendisleri/p/DgFBuGFCnKC/"
+              class="relative block aspect-[4/5] w-full cursor-zoom-in overflow-hidden bg-fir text-left focus:outline-none"
+              aria-label="OGM 250 ve DKMP 50 kadro afişini büyüt"
+            >
+              <img
+                src="./images/post-3.jpg"
+                alt="OGM 250 Kadro, DKMP 50 Kadro — Aralık Atamalarında Sahada Göreve Hazırız kampanya afişi"
+                loading="lazy"
+                class="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
+              />
+              <span class="absolute right-3 top-3 z-20 inline-flex items-center gap-1 rounded-[4px] bg-black/55 px-2.5 py-1 text-[11px] font-semibold text-white backdrop-blur-sm opacity-85 transition-opacity group-hover:opacity-100">
+                <i data-lucide="zoom-in" class="h-3.5 w-3.5"></i>
+                Büyüt
+              </span>
+            </button>
+            <div class="flex flex-1 flex-col justify-between p-5">
+              <p class="text-sm leading-relaxed text-ink-muted">
+                OGM’de 250, DKMP’de 50 kadro talebimizle Aralık atamalarında sahada göreve hazırız. <strong class="font-semibold text-fir">#OEMeKADRO</strong>
+              </p>
+              <a
+                href="https://www.instagram.com/oemuhendisleri/p/DgFBuGFCnKC/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-4 inline-flex items-center justify-between border-t border-[#EDF1EE] pt-3.5 text-xs font-bold text-fir transition-colors hover:text-gold-deep"
+              >
+                <span>Gönderiye Git</span>
+                <span>Instagram'da Görüntüle ↗</span>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Follow Profile CTA Button -->
+        <div class="mt-10 flex justify-center">
+          <a
+            href="https://instagram.com/oemuhendisleri"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2.5 rounded-[4px] bg-fir px-7 py-3.5 text-sm font-bold text-white shadow-sm transition-all duration-200 hover:bg-fir-mid hover:shadow-md"
+          >
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
+            <span>@oemuhendisleri Profilini Takip Et</span>
+            <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- 7. İLETİŞİM VE TOPLULUK KANALLARI (GERÇEK SVG LOGOLAR)    -->
+    <!-- ========================================================= -->
+    <section id="iletisim" class="scroll-mt-16 border-t border-[#E5EAE7] bg-white py-20 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="max-w-3xl">
+          <p class="text-xs font-bold uppercase tracking-[0.14em] text-gold-deep">
+            Resmi Kanallar
+          </p>
+          <h2 class="mt-2 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+            Bize Katılın ve İletişime Geçin
+          </h2>
+          <p class="mt-3 text-base leading-relaxed text-ink-muted">
+            Sesimizi daha gür duyurmak, etkinliklerimize katılmak ve güncel gelişmeleri takip etmek için resmi kanallarımız:
+          </p>
+        </div>
+
+        <!-- 4 Clickable Contact Cards with Authentic Inline Brand SVGs -->
+        <div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- 1. X (Twitter) -->
+          <a
+            href="https://x.com/oemuhendisleri"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group flex flex-col justify-between rounded-md border border-[#E4EAE6] bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-fir/40 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-fir"
+          >
+            <div>
+              <div class="flex items-center justify-between">
+                <span class="flex h-12 w-12 items-center justify-center rounded-md bg-[#0F1419] text-white">
+                  <!-- Official X Logo SVG -->
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  </svg>
+                </span>
+                <i data-lucide="arrow-up-right" class="h-4 w-4 text-ink-muted transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-fir"></i>
+              </div>
+              <p class="mt-6 text-xs font-bold uppercase tracking-[0.1em] text-ink-muted">X (Twitter)</p>
+              <h3 class="mt-1 text-lg font-bold text-ink group-hover:text-fir transition-colors">
+                @oemuhendisleri
+              </h3>
+            </div>
+            <p class="mt-3 text-sm leading-relaxed text-ink-muted">
+              Gündem ve tweet etkinliklerimiz
+            </p>
+          </a>
+
+          <!-- 2. Instagram -->
+          <a
+            href="https://instagram.com/oemuhendisleri"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group flex flex-col justify-between rounded-md border border-[#E4EAE6] bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-fir/40 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-fir"
+          >
+            <div>
+              <div class="flex items-center justify-between">
+                <span class="flex h-12 w-12 items-center justify-center rounded-md bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF] text-white">
+                  <!-- Official Instagram Camera Logo SVG -->
+                  <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                  </svg>
+                </span>
+                <i data-lucide="arrow-up-right" class="h-4 w-4 text-ink-muted transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-fir"></i>
+              </div>
+              <p class="mt-6 text-xs font-bold uppercase tracking-[0.1em] text-ink-muted">Instagram</p>
+              <h3 class="mt-1 text-lg font-bold text-ink group-hover:text-fir transition-colors">
+                @oemuhendisleri
+              </h3>
+            </div>
+            <p class="mt-3 text-sm leading-relaxed text-ink-muted">
+              Gündem ve etkinliklerimiz
+            </p>
+          </a>
+
+          <!-- 3. WhatsApp Grubu -->
+          <a
+            href="https://chat.whatsapp.com/Llo1HCiAFisAuDsnVBUSUt?s=cl&p=i&iam=2"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group flex flex-col justify-between rounded-md border border-[#E4EAE6] bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-fir/40 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-fir"
+          >
+            <div>
+              <div class="flex items-center justify-between">
+                <span class="flex h-12 w-12 items-center justify-center rounded-md bg-[#25D366] text-white">
+                  <!-- Official WhatsApp Logo SVG -->
+                  <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.49 0 .14 5.35.14 11.92c0 2.1.55 4.15 1.59 5.96L0 24l6.29-1.65a11.88 11.88 0 0 0 5.77 1.47h.01c6.57 0 11.92-5.35 11.92-11.92 0-3.18-1.24-6.17-3.47-8.42zM12.06 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.73.98 1-3.64-.24-.37a9.86 9.86 0 0 1-1.52-5.26c0-5.46 4.44-9.9 9.9-9.9 2.64 0 5.13 1.03 7 2.9a9.84 9.84 0 0 1 2.9 7c0 5.46-4.44 9.88-9.91 9.88zm5.43-7.41c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.21 5.09 4.5.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z" />
+                  </svg>
+                </span>
+                <i data-lucide="arrow-up-right" class="h-4 w-4 text-ink-muted transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-fir"></i>
+              </div>
+              <p class="mt-6 text-xs font-bold uppercase tracking-[0.1em] text-ink-muted">WhatsApp Grubu</p>
+              <h3 class="mt-1 text-lg font-bold text-ink group-hover:text-fir transition-colors">
+                Koordinasyon Grubuna Katıl
+              </h3>
+            </div>
+            <p class="mt-3 text-sm leading-relaxed text-ink-muted">
+              Anlık organizasyon ve bilgilendirme
+            </p>
+          </a>
+
+          <!-- 4. E-Posta (Gmail) with One-Click Copy -->
+          <div class="group flex flex-col justify-between rounded-md border border-[#E4EAE6] bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-fir/40 hover:shadow-xl">
+            <div>
+              <div class="flex items-center justify-between">
+                <span class="flex h-12 w-12 items-center justify-center rounded-md border border-[#E5EAE7] bg-sage">
+                  <!-- Official Gmail M-Envelope Logo SVG -->
+                  <svg class="h-6 w-6" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="#4285F4" d="M2.5 19.5h3.5v-8.4L1 7.35V18c0 .83.67 1.5 1.5 1.5z" />
+                    <path fill="#34A853" d="M18 19.5h3.5c.83 0 1.5-.67 1.5-1.5V7.35l-5 3.75v8.4z" />
+                    <path fill="#FBBC05" d="M18 4.8v6.3l5-3.75V5.5c0-1.85-2.12-2.91-3.6-1.8L18 4.8z" />
+                    <path fill="#EA4335" d="M6 11.1V4.8l6 4.5 6-4.5v6.3l-6 4.5-6-4.5z" />
+                    <path fill="#C5221F" d="M1 5.5v1.85l5 3.75V4.8L4.6 3.7C3.12 2.59 1 3.65 1 5.5z" />
+                  </svg>
+                </span>
+                <button
+                  id="copy-email-btn"
+                  type="button"
+                  class="inline-flex items-center gap-1.5 rounded-[4px] border border-[#DCE3DF] bg-sage px-2.5 py-1.5 text-[11px] font-bold text-fir transition-colors hover:border-fir hover:bg-fir hover:text-white"
+                  aria-label="E-posta adresini kopyala"
+                >
+                  <i data-lucide="copy" class="h-3.5 w-3.5"></i>
+                  <span id="copy-email-label">Kopyala</span>
+                </button>
+              </div>
+              <p class="mt-6 text-xs font-bold uppercase tracking-[0.1em] text-ink-muted">E-Posta (Gmail)</p>
+              <a
+                href="mailto:oemuhendisleri@gmail.com"
+                class="mt-1 block break-all text-base font-bold text-ink transition-colors hover:text-fir"
+              >
+                oemuhendisleri@gmail.com
+              </a>
+            </div>
+            <div class="mt-3 flex items-center justify-between gap-2">
+              <p class="text-sm leading-relaxed text-ink-muted">
+                Basın, destek ve kurumsal iletişim
+              </p>
+              <a href="mailto:oemuhendisleri@gmail.com" aria-label="E-posta gönder" class="shrink-0 text-ink-muted hover:text-fir">
+                <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================= -->
+  <!-- 6. FOOTER                                                 -->
+  <!-- ========================================================= -->
+  <footer class="border-t border-fir-mid/40 bg-fir py-9 text-white/85">
+    <div class="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+      <p class="text-xs font-medium tracking-wide sm:text-sm">
+        © 2026 Orman Endüstri Mühendisleri Atama Platformu • Tüm Hakları Saklıdır •
+        <span class="font-bold text-gold">#OEMeKADRO</span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ========================================================= -->
+  <!-- KAYNAKÇA MODAL                                            -->
+  <!-- ========================================================= -->
+  <div
+    id="sources-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="sources-modal-title"
+    class="fixed inset-0 z-[1000] hidden items-center justify-center bg-[#0A2016]/60 p-4 backdrop-blur-sm"
+  >
+    <div class="flex max-h-[86vh] w-full max-w-3xl flex-col overflow-hidden rounded-md border border-[#DCE4DF] bg-white shadow-2xl">
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between border-b border-[#E5EAE7] bg-sage px-6 py-4">
+        <div class="flex items-center gap-2.5">
+          <span class="flex h-8 w-8 items-center justify-center rounded-[4px] bg-fir text-white">
+            <i data-lucide="book-open-check" class="h-4 w-4"></i>
+          </span>
+          <div>
+            <h3 id="sources-modal-title" class="text-base font-bold text-ink sm:text-lg">
+              Resmi Kaynakça
+            </h3>
+            <p class="text-xs text-ink-muted">
+              Kamu İstihdamı ve KPSS Gerçeği bölümündeki tüm verilerin resmi dayanakları
+            </p>
+          </div>
+        </div>
+        <button
+          id="close-sources-btn"
+          type="button"
+          aria-label="Kaynakça penceresini kapat"
+          class="inline-flex h-9 w-9 items-center justify-center rounded-[4px] border border-[#DCE3DF] bg-white text-ink-muted transition-colors hover:border-fir hover:text-fir"
+        >
+          <i data-lucide="x" class="h-4 w-4"></i>
+        </button>
+      </div>
+
+      <!-- Modal Scrollable Body -->
+      <div class="overflow-y-auto px-6 py-5">
+        <ol class="space-y-2.5 text-sm">
+          <li class="rounded-[4px] border border-[#E9EFEA] bg-white p-3.5 transition-colors hover:border-fir/35 hover:bg-sage/50">
+            <a href="https://dokuman.osym.gov.tr/pdfdokuman/2026/KPSS/TERCIH1/lisans-nitelik_t1d03072026.pdf" target="_blank" rel="noopener noreferrer" class="flex items-start justify-between gap-3 font-medium text-ink hover:text-fir">
+              <span><strong class="mr-1.5 text-fir">1.</strong> ÖSYM 2026/1 KPSS Lisans Nitelik Kodları (4869 Kodu)</span>
+              <i data-lucide="external-link" class="mt-0.5 h-4 w-4 shrink-0 text-ink-muted"></i>
+            </a>
+          </li>
+          <li class="rounded-[4px] border border-[#E9EFEA] bg-white p-3.5 transition-colors hover:border-fir/35 hover:bg-sage/50">
+            <a href="https://dokuman.osym.gov.tr/pdfdokuman/2026/KPSS/TERCIH1/tablo3_t1d03072026.pdf" target="_blank" rel="noopener noreferrer" class="flex items-start justify-between gap-3 font-medium text-ink hover:text-fir">
+              <span><strong class="mr-1.5 text-fir">2.</strong> ÖSYM KPSS-2026/1 Lisans Tercih Tablo-3</span>
+              <i data-lucide="external-link" class="mt-0.5 h-4 w-4 shrink-0 text-ink-muted"></i>
+            </a>
+          </li>
+          <li class="rounded-[4px] border border-[#E9EFEA] bg-white p-3.5 transition-colors hover:border-fir/35 hover:bg-sage/50">
+            <a href="https://www.ogm.gov.tr/tr/haberler/-personel-alim-ilani" target="_blank" rel="noopener noreferrer" class="flex items-start justify-between gap-3 font-medium text-ink hover:text-fir">
+              <span><strong class="mr-1.5 text-fir">3.</strong> OGM 2019 Sözleşmeli Personel Alım İlanı</span>
+              <i data-lucide="external-link" class="mt-0.5 h-4 w-4 shrink-0 text-ink-muted"></i>
+            </a>
+          </li>
+          <li class="rounded-[4px] border border-[#E9EFEA] bg-white p-3.5 transition-colors hover:border-fir/35 hover:bg-sage/50">
+            <a href="https://www.hurriyet.com.tr/gundem/ogm-sozlesmeli-personel-alimi-basvuru-sartlari-nelerdir-ogm-is-basvurusu-nasil-yapilir-41330491" target="_blank" rel="noopener noreferrer" class="flex items-start justify-between gap-3 font-medium text-ink hover:text-fir">
+              <span><strong class="mr-1.5 text-fir">4.</strong> OGM 2019 Kontenjan Dağılım Haberi (10 OEM)</span>
+              <i data-lucide="external-link" class="mt-0.5 h-4 w-4 shrink-0 text-ink-muted"></i>
+            </a>
+          </li>
+          <li class="rounded-[4px] border border-[#E9EFEA] bg-white p-3.5 transition-colors hover:border-fir/35 hover:bg-sage/50">
+            <a href="https://www.ogm.gov.tr/tr/duyurular/2022-yili-sozlesmeli-muhendis-(orman-endustri-muhendisi)-alim-i%CC%87lani" target="_blank" rel="noopener noreferrer" class="flex items-start justify-between gap-3 font-medium text-ink hover:text-fir">
+              <span><strong class="mr-1.5 text-fir">5.</strong> OGM 2022 Sözleşmeli OEM Alım İlanı (50 Kadro)</span>
+              <i data-lucide="external-link" class="mt-0.5 h-4 w-4 shrink-0 text-ink-muted"></i>
+            </a>
+          </li>
+          <li class="rounded-[4px] border border-[#E9EFEA] bg-white p-3.5 transition-colors hover:border-fir/35 hover:bg-sage/50">
+            <a href="https://www.ogm.gov.tr/tr/duyurular-sitesi/Documents/orman-genel-mudurlugu-2023-yili-109-adet-sozlesmeli-personel-alimi-yerlestirme-sonuclarina-i%CC%87liskin-i%CC%87lan/EK-1_EN%20Y%C3%9CKSEK%20VE%20END%C3%9C%C5%9E%C3%9CK%20KPSS%20PUAN%20CETVEL%C4%B0.pdf" target="_blank" rel="noopener noreferrer" class="flex items-start justify-between gap-3 font-medium text-ink hover:text-fir">
+              <span><strong class="mr-1.5 text-fir">6.</strong> OGM 2023 Sözleşmeli Personel Puan Cetveli (EK-1, 17 OEM)</span>
+              <i data-lucide="external-link" class="mt-0.5 h-4 w-4 shrink-0 text-ink-muted"></i>
+            </a>
+          </li>
+          <li class="rounded-[4px] border border-[#E9EFEA] bg-white p-3.5 transition-colors hover:border-fir/35 hover:bg-sage/50">
+            <a href="https://www.ogm.gov.tr/tr/duyurular/2024-yili-20-adet-sozlesmeli%CC%87-muhendi%CC%87s-(orman-muhendi%CC%87si%CC%87)-alim-i%CC%87lani" target="_blank" rel="noopener noreferrer" class="flex items-start justify-between gap-3 font-medium text-ink hover:text-fir">
+              <span><strong class="mr-1.5 text-fir">7.</strong> OGM 2024 Sözleşmeli Mühendis İlanı (20 Orman Müh.)</span>
+              <i data-lucide="external-link" class="mt-0.5 h-4 w-4 shrink-0 text-ink-muted"></i>
+            </a>
+          </li>
+          <li class="rounded-[4px] border border-[#E9EFEA] bg-white p-3.5 transition-colors hover:border-fir/35 hover:bg-sage/50">
+            <a href="https://www.ogm.gov.tr/tr/duyurular/2025-yili-150-adet-sozlesmeli-muhendis-(orman-muhendisi)-alim-i%CC%87lani" target="_blank" rel="noopener noreferrer" class="flex items-start justify-between gap-3 font-medium text-ink hover:text-fir">
+              <span><strong class="mr-1.5 text-fir">8.</strong> OGM Mart 2025 Sözleşmeli Mühendis İlanı (150 Orman Müh.)</span>
+              <i data-lucide="external-link" class="mt-0.5 h-4 w-4 shrink-0 text-ink-muted"></i>
+            </a>
+          </li>
+          <li class="rounded-[4px] border border-[#E9EFEA] bg-white p-3.5 transition-colors hover:border-fir/35 hover:bg-sage/50">
+            <a href="https://www.ogm.gov.tr/tr/duyurular-sitesi/Documents/orman-genel-mudurlugu-2025-yili-unvan-degisikligi-yazili-ve-sozlu-sinavi-i%CC%87lani/EK-2%20mezun%20olunan%20b%C3%B6l%C3%BCmler.pdf" target="_blank" rel="noopener noreferrer" class="flex items-start justify-between gap-3 font-medium text-ink hover:text-fir">
+              <span><strong class="mr-1.5 text-fir">9.</strong> OGM 2025 Unvan Değişikliği Mezun Bölümler (EK-2, 25 OEM)</span>
+              <i data-lucide="external-link" class="mt-0.5 h-4 w-4 shrink-0 text-ink-muted"></i>
+            </a>
+          </li>
+          <li class="rounded-[4px] border border-[#E9EFEA] bg-white p-3.5 transition-colors hover:border-fir/35 hover:bg-sage/50">
+            <a href="https://www.ogm.gov.tr/tr/duyurular/496-adet-sozlesmeli-personel-alimi-yerlestirme-sonuclarina-iliskin-ilan" target="_blank" rel="noopener noreferrer" class="flex items-start justify-between gap-3 font-medium text-ink hover:text-fir">
+              <span><strong class="mr-1.5 text-fir">10.</strong> OGM Ocak 2026 496 Sözleşmeli Personel Sonuç İlanı</span>
+              <i data-lucide="external-link" class="mt-0.5 h-4 w-4 shrink-0 text-ink-muted"></i>
+            </a>
+          </li>
+          <li class="rounded-[4px] border border-[#E9EFEA] bg-white p-3.5 transition-colors hover:border-fir/35 hover:bg-sage/50">
+            <a href="https://www.ogm.gov.tr/tr/duyurular/tarim-ve-orman-bakanligi-orman-genel-mudurlugu-mufettis-yardimciligi-giris-sinavi-i%CC%87lani" target="_blank" rel="noopener noreferrer" class="flex items-start justify-between gap-3 font-medium text-ink hover:text-fir">
+              <span><strong class="mr-1.5 text-fir">11.</strong> OGM Kasım 2026 Müfettiş Yardımcılığı Giriş Sınavı İlanı (2 OEM)</span>
+              <i data-lucide="external-link" class="mt-0.5 h-4 w-4 shrink-0 text-ink-muted"></i>
+            </a>
+          </li>
+          <li class="rounded-[4px] border border-[#E9EFEA] bg-white p-3.5 transition-colors hover:border-fir/35 hover:bg-sage/50">
+            <a href="https://www.ogm.gov.tr/tr/duyurular/tarim-ve-orman-bakanligi-orman-genel-mudurlugu-mufettis-yardimciligi-giris-sinavinin-yazili-bolumune-katilmaya-hak-kazanan" target="_blank" rel="noopener noreferrer" class="flex items-start justify-between gap-3 font-medium text-ink hover:text-fir">
+              <span><strong class="mr-1.5 text-fir">12.</strong> OGM Kasım 2026 Müfettiş Yardımcılığı Yazılı Aday Listesi (13 OEM Adayı)</span>
+              <i data-lucide="external-link" class="mt-0.5 h-4 w-4 shrink-0 text-ink-muted"></i>
+            </a>
+          </li>
+          <li class="rounded-[4px] border border-[#E9EFEA] bg-white p-3.5 transition-colors hover:border-fir/35 hover:bg-sage/50">
+            <a href="https://www.ogm.gov.tr/tr/e-kutuphane-sitesi/mevzuat-sitesi/Yonergeler/Orman%20Genel%20M%C3%BCd%C3%BCrl%C3%BC%C4%9F%C3%BC%20Standart%20Kadro%20Y%C3%B6nergesi.pdf" target="_blank" rel="noopener noreferrer" class="flex items-start justify-between gap-3 font-medium text-ink hover:text-fir">
+              <span><strong class="mr-1.5 text-fir">13.</strong> OGM Standart Kadro Yönergesi</span>
+              <i data-lucide="external-link" class="mt-0.5 h-4 w-4 shrink-0 text-ink-muted"></i>
+            </a>
+          </li>
+          <li class="rounded-[4px] border border-[#E9EFEA] bg-white p-3.5 transition-colors hover:border-fir/35 hover:bg-sage/50">
+            <a href="https://www.sayistay.gov.tr/reports/download/ZwoRkk5gLJ-orman-genel-mudurlugu" target="_blank" rel="noopener noreferrer" class="flex items-start justify-between gap-3 font-medium text-ink hover:text-fir">
+              <span><strong class="mr-1.5 text-fir">14.</strong> Sayıştay 2024 OGM Düzenlilik Denetim Raporu</span>
+              <i data-lucide="external-link" class="mt-0.5 h-4 w-4 shrink-0 text-ink-muted"></i>
+            </a>
+          </li>
+          <li class="rounded-[4px] border border-[#E9EFEA] bg-white p-3.5 transition-colors hover:border-fir/35 hover:bg-sage/50">
+            <a href="https://www.sayistay.gov.tr/reports/download/eaYwdk5oX1-tarim-ve-orman-bakanligi" target="_blank" rel="noopener noreferrer" class="flex items-start justify-between gap-3 font-medium text-ink hover:text-fir">
+              <span><strong class="mr-1.5 text-fir">15.</strong> Sayıştay 2025 Tarım ve Orman Bakanlığı Denetim Raporu</span>
+              <i data-lucide="external-link" class="mt-0.5 h-4 w-4 shrink-0 text-ink-muted"></i>
+            </a>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="flex justify-end border-t border-[#E5EAE7] bg-sage px-6 py-3.5">
+        <button
+          id="close-sources-footer-btn"
+          type="button"
+          class="rounded-[4px] bg-fir px-5 py-2 text-xs font-bold text-white transition-colors hover:bg-fir-mid"
+        >
+          Kapat
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- HAZIR PAYLAŞIM ŞABLONU (X / TWITTER) MODAL                -->
+  <!-- ========================================================= -->
+  <div
+    id="tweet-templates-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="tweet-modal-title"
+    class="fixed inset-0 z-[1000] hidden items-center justify-center bg-[#0A2016]/65 p-4 backdrop-blur-sm"
+  >
+    <div class="flex max-h-[86vh] w-full max-w-3xl flex-col overflow-hidden rounded-md border border-[#DCE4DF] bg-white shadow-2xl">
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between gap-3 border-b border-[#E5EAE7] bg-sage px-6 py-4">
+        <div class="flex items-center gap-3">
+          <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-[4px] bg-[#0F1419] text-white">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </span>
+          <div>
+            <h3 id="tweet-modal-title" class="text-base font-bold text-ink sm:text-lg">
+              Hazır Paylaşım Şablonları (#OEMeKADRO)
+            </h3>
+            <p class="text-xs text-ink-muted">
+              Aşağıdaki kampanya metinlerini tek tıkla kopyalayın veya doğrudan X’te paylaşın.
+            </p>
+          </div>
+        </div>
+        <button
+          id="close-tweets-btn"
+          type="button"
+          aria-label="Paylaşım şablonları penceresini kapat"
+          class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-[4px] border border-[#DCE3DF] bg-white text-ink-muted transition-colors hover:border-fir hover:text-fir"
+        >
+          <i data-lucide="x" class="h-4 w-4"></i>
+        </button>
+      </div>
+
+      <!-- Quick Random Action Bar -->
+      <div class="flex flex-wrap items-center justify-between gap-2 border-b border-[#EDF1EE] bg-[#FAFBF9] px-6 py-3">
+        <span class="text-xs font-semibold text-ink-muted">15 hazır #OEMeKADRO kampanya metni</span>
+        <button
+          id="random-tweet-btn"
+          type="button"
+          class="inline-flex items-center gap-1.5 rounded-[4px] border border-fir/30 bg-fir-light px-3 py-1.5 text-xs font-bold text-fir transition-colors hover:bg-fir hover:text-white"
+        >
+          <i data-lucide="shuffle" class="h-3.5 w-3.5"></i>
+          <span>Rastgele Metin Kopyala</span>
+        </button>
+      </div>
+
+      <!-- Scrollable Templates List (Populated by JS) -->
+      <div id="tweet-templates-list" class="overflow-y-auto px-6 py-5 space-y-3"></div>
+
+      <!-- Modal Footer -->
+      <div class="flex items-center justify-between border-t border-[#E5EAE7] bg-sage px-6 py-3.5">
+        <a
+          href="https://x.com/oemuhendisleri"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-xs font-bold text-fir hover:underline"
+        >
+          @oemuhendisleri X Profiline Git ↗
+        </a>
+        <button
+          id="close-tweets-footer-btn"
+          type="button"
+          class="rounded-[4px] bg-fir px-5 py-2 text-xs font-bold text-white transition-colors hover:bg-fir-mid"
+        >
+          Kapat
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- GÖRSEL BÜYÜTME (LIGHTBOX) MODAL                           -->
+  <!-- ========================================================= -->
+  <div
+    id="image-lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Görsel Önizleme"
+    class="fixed inset-0 z-[1100] hidden items-center justify-center bg-[#06140D]/85 p-4 backdrop-blur-sm"
+  >
+    <div class="relative flex max-h-[92vh] w-full max-w-3xl flex-col overflow-hidden rounded-lg border border-white/15 bg-[#0F2E20] shadow-2xl">
+      <button
+        id="close-lightbox-btn"
+        type="button"
+        aria-label="Önizlemeyi kapat"
+        class="absolute right-3 top-3 z-10 inline-flex h-9 w-9 items-center justify-center rounded-full bg-black/60 text-white transition-colors hover:bg-black/80"
+      >
+        <i data-lucide="x" class="h-5 w-5"></i>
+      </button>
+      <div class="flex max-h-[75vh] items-center justify-center bg-black/40 p-2">
+        <img id="lightbox-img" src="" alt="" class="max-h-[72vh] w-auto max-w-full rounded object-contain" />
+      </div>
+      <div class="flex flex-col justify-between gap-3 border-t border-white/10 bg-fir px-5 py-4 sm:flex-row sm:items-center">
+        <p id="lightbox-caption" class="text-xs leading-relaxed text-white/90 sm:text-sm"></p>
+        <a
+          id="lightbox-link"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex shrink-0 items-center gap-1.5 rounded-[4px] bg-white px-4 py-2 text-xs font-bold text-fir transition-colors hover:bg-gold"
+        >
+          <span>Instagram'da Görüntüle ↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- BACK TO TOP BUTTON                                        -->
+  <!-- ========================================================= -->
+  <button
+    id="back-to-top-btn"
+    type="button"
+    aria-label="Yukarı çık"
+    class="pointer-events-none fixed bottom-6 right-6 z-40 inline-flex h-11 w-11 translate-y-3 items-center justify-center rounded-md border border-fir/20 bg-fir text-white opacity-0 shadow-lg transition-all duration-300 hover:bg-fir-mid focus:outline-none focus:ring-2 focus:ring-fir"
+  >
+    <i data-lucide="arrow-up" class="h-5 w-5"></i>
+  </button>
+
+  <!-- ========================================================= -->
+  <!-- MINIMAL JS: SPLASH SCREEN, CURSOR TREE TRAIL & NAV        -->
+  <!-- ========================================================= -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+
+      /* ------------------------------------------------------- */
+      /* 1. Splash Screen Dismissal                              */
+      /* ------------------------------------------------------- */
+      const splash = document.getElementById('splash-screen');
+      const enterBtn = document.getElementById('enter-site-btn');
+      let splashActive = true;
+
+      const dismissSplash = () => {
+        if (!splashActive || !splash) return;
+        splashActive = false;
+        splash.classList.add('is-dismissed');
+        document.body.classList.remove('splash-open');
+
+        window.setTimeout(() => {
+          splash.style.display = 'none';
+        }, 700);
+      };
+
+      if (enterBtn) {
+        enterBtn.addEventListener('click', dismissSplash);
+      }
+
+      /* ------------------------------------------------------- */
+      /* 2. Site-Wide Zero-Lag GPU Cursor Tree Trail             */
+      /* ------------------------------------------------------- */
+      const trailLayer = document.getElementById('cursor-trail-layer');
+      const isTouchOrCoarse =
+        window.matchMedia('(pointer: coarse)').matches ||
+        (!window.matchMedia('(hover: hover) and (pointer: fine)').matches &&
+          ('ontouchstart' in window || navigator.maxTouchPoints > 0));
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (trailLayer && !isTouchOrCoarse && !prefersReducedMotion) {
+        const symbols = ['🌲', '🌳', '🌿'];
+        const DISTANCE_THRESHOLD = 50; // 45px - 55px mesafe eşiği
+        const DISTANCE_SQ = DISTANCE_THRESHOLD * DISTANCE_THRESHOLD;
+        const MAX_PARTICLES = 15;
+
+        let lastX = -9999;
+        let lastY = -9999;
+        let pointerX = 0;
+        let pointerY = 0;
+        let pendingFrame = false;
+
+        const spawnTreeParticle = (x, y) => {
+          if (trailLayer.childElementCount >= MAX_PARTICLES && trailLayer.firstElementChild) {
+            trailLayer.firstElementChild.remove();
+          }
+
+          const el = document.createElement('span');
+          el.className = 'tree-particle';
+          el.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+
+          const size = 14 + Math.floor(Math.random() * 5); // 14px - 18px
+          const startOpacity = (0.35 + Math.random() * 0.1).toFixed(2); // 0.35 - 0.45
+          const half = size * 0.5;
+          const x0 = x - half;
+          const y0 = y - half;
+          const dx = (Math.random() - 0.5) * 26;
+          const dy = (Math.random() > 0.5 ? -1 : 1) * (14 + Math.random() * 18);
+          const rot = (Math.random() - 0.5) * 28;
+
+          el.style.fontSize = `${size}px`;
+          el.style.setProperty('--start-opacity', startOpacity);
+          el.style.setProperty('--x0', `${x0.toFixed(1)}px`);
+          el.style.setProperty('--y0', `${y0.toFixed(1)}px`);
+          el.style.setProperty('--x1', `${(x0 + dx).toFixed(1)}px`);
+          el.style.setProperty('--y1', `${(y0 + dy).toFixed(1)}px`);
+          el.style.setProperty('--rot', `${rot.toFixed(1)}deg`);
+
+          trailLayer.appendChild(el);
+          el.addEventListener('animationend', () => el.remove(), { once: true });
+        };
+
+        window.addEventListener(
+          'mousemove',
+          (e) => {
+            pointerX = e.clientX;
+            pointerY = e.clientY;
+
+            if (pendingFrame) return;
+            pendingFrame = true;
+
+            window.requestAnimationFrame(() => {
+              pendingFrame = false;
+              const diffX = pointerX - lastX;
+              const diffY = pointerY - lastY;
+
+              if (diffX * diffX + diffY * diffY >= DISTANCE_SQ) {
+                lastX = pointerX;
+                lastY = pointerY;
+                spawnTreeParticle(pointerX, pointerY);
+              }
+            });
+          },
+          { passive: true }
+        );
+      }
+
+      /* ------------------------------------------------------- */
+      /* 2. Mobile Navigation Toggle                             */
+      /* ------------------------------------------------------- */
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const iconOpen = document.getElementById('menu-icon-open');
+      const iconClose = document.getElementById('menu-icon-close');
+      const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+      const setMenuState = (isOpen) => {
+        mobileMenu.classList.toggle('hidden', !isOpen);
+        iconOpen.classList.toggle('hidden', isOpen);
+        iconClose.classList.toggle('hidden', !isOpen);
+        menuBtn.setAttribute('aria-expanded', String(isOpen));
+      };
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+          const isOpen = mobileMenu.classList.contains('hidden');
+          setMenuState(isOpen);
+        });
+
+        mobileLinks.forEach((link) => {
+          link.addEventListener('click', () => setMenuState(false));
+        });
+      }
+
+      /* ------------------------------------------------------- */
+      /* 3. 2023 OGM KPSS P3 Province Scores Accordion           */
+      /* ------------------------------------------------------- */
+      const kpssToggle = document.getElementById('kpss-2023-toggle');
+      const kpssPanel = document.getElementById('kpss-2023-panel');
+      const kpssChevron = document.getElementById('kpss-2023-chevron');
+
+      if (kpssToggle && kpssPanel) {
+        kpssToggle.addEventListener('click', () => {
+          const isExpanded = kpssToggle.getAttribute('aria-expanded') === 'true';
+          kpssToggle.setAttribute('aria-expanded', String(!isExpanded));
+          kpssPanel.classList.toggle('hidden', isExpanded);
+          if (kpssChevron) {
+            kpssChevron.style.transform = isExpanded ? 'rotate(0deg)' : 'rotate(180deg)';
+          }
+        });
+      }
+
+      /* ------------------------------------------------------- */
+      /* 4. Kaynakça Modal                                       */
+      /* ------------------------------------------------------- */
+      const sourcesModal = document.getElementById('sources-modal');
+      const openSourcesBtn = document.getElementById('open-sources-btn');
+      const closeSourcesBtn = document.getElementById('close-sources-btn');
+      const closeSourcesFooterBtn = document.getElementById('close-sources-footer-btn');
+
+      const openSourcesModal = () => {
+        if (!sourcesModal) return;
+        sourcesModal.classList.remove('hidden');
+        sourcesModal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      };
+
+      const closeSourcesModal = () => {
+        if (!sourcesModal) return;
+        sourcesModal.classList.add('hidden');
+        sourcesModal.classList.remove('flex');
+        document.body.style.overflow = '';
+      };
+
+      if (openSourcesBtn) {
+        openSourcesBtn.addEventListener('click', openSourcesModal);
+      }
+      if (closeSourcesBtn) {
+        closeSourcesBtn.addEventListener('click', closeSourcesModal);
+      }
+      if (closeSourcesFooterBtn) {
+        closeSourcesFooterBtn.addEventListener('click', closeSourcesModal);
+      }
+      if (sourcesModal) {
+        sourcesModal.addEventListener('click', (e) => {
+          if (e.target === sourcesModal) closeSourcesModal();
+        });
+      }
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          if (sourcesModal && !sourcesModal.classList.contains('hidden')) closeSourcesModal();
+          if (tweetModal && !tweetModal.classList.contains('hidden')) closeTweetModal();
+          if (lightboxModal && !lightboxModal.classList.contains('hidden')) closeLightbox();
+        }
+      });
+
+      /* ------------------------------------------------------- */
+      /* 5. FAQ Accordion (OEM Sahada Ne Yapar?)                 */
+      /* ------------------------------------------------------- */
+      const faqToggles = document.querySelectorAll('.faq-toggle');
+      faqToggles.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+          const panel = btn.nextElementSibling;
+          const chevron = btn.querySelector('.faq-chevron');
+          btn.setAttribute('aria-expanded', String(!isExpanded));
+          if (panel) panel.classList.toggle('hidden', isExpanded);
+          if (chevron) chevron.style.transform = isExpanded ? 'rotate(0deg)' : 'rotate(180deg)';
+        });
+      });
+
+      /* ------------------------------------------------------- */
+      /* 6. Hazır Paylaşım Şablonları Modal (#OEMeKADRO)         */
+      /* ------------------------------------------------------- */
+      const TWEET_TEMPLATES = [
+        'Aralık atamalarında OGM depolarındaki barkodlu sistem, standardizasyon ve üretim için 250; DKMP’nin ahşap yapı, mesire yerleri ve proje süreçleri için 50 Orman Endüstri Mühendisi alımı istiyoruz! Teknik gücümüzle sahada göreve hazırız.\n\n@HTurkyilmazOMO @kadircokcetin06\n#OEMeKADRO',
+        'Milli parklardaki ahşap yapılar, ziyaretçi alanları, devrik ağaç güvenliği ve proje süreçleri için DKMP’ye 50 Orman Endüstri Mühendisi alımı istiyoruz! Doğaya uyumlu teknik güç sahada olmalı. 🌲\n\n@HTurkyilmazOMO @kadircokcetin06 @milliparklar\n#OEMeKADRO #OrmanEndüstriDKMP',
+        'Orman işletme depoları, barkodlu sistem, odun standardizasyonu ve pazarlama süreçleri için OGM’ye 250 Orman Endüstri Mühendisi alımı istiyoruz! Endüstriyel ve teknik güç sahada olmalı. 🌲\n\n@HTurkyilmazOMO @bekirkaracabey @OGMgovtr\n#OEMe250KADRO #OEMeKADRO #OrmanEndüstriKadro',
+        'Milli Parklardaki ahşap yapıların korunması ve emprenye teknolojileri için sahada uzmanlığımıza ihtiyaç var! 🌲\n\nDKMP bünyesinde görev almaya hazırız, 250 kadro bekliyoruz!\n\n@ibrahimyumakli @TCTarim @milliparklar\n#OEMe250KADRO #OEMeKADRO #DKMPOrmanEndüstriKadro',
+        'Barkodlu sisteme geçilen orman işletme depolarında iş yükü katlanırken, OEM atamaları ne yazık ki yetersiz kalıyor! 🌲🏭\n\n250 Orman Endüstri Mühendisi alımı talep ediyoruz!\n\n@ibrahimyumakli @HTurkyilmazOMO @kadircokcetin06 @BekirKARACABEY_ @milliparklar\n#OEMe250KADRO #OEMeKADRO',
+        'Aralık dönemi alımlarında Orman Endüstri Mühendislerine hak ettiği değerin verilmesini istiyoruz. 🌲\n\nOGM ve DKMP bünyesinde sahada görev almaya hazırız. Aralık atamasında 250 kadro müjdesi bekliyoruz!\n\n@HTurkyilmazOMO @BekirKARACABEY_ @kadircokcetin06\n#OEMe250KADRO #OEMeKADRO',
+        'Doğa Koruma ve Milli Parklar (DKMP) bünyesindeki ahşap yapı ve alan planlamalarında uzmanlığımıza ihtiyaç var! 🌲\n\nMilli Parklar alımlarında Orman Endüstri Mühendislerine de kadro açılmasını talep ediyoruz.\n\n@milliparklar @kadircokcetin06 @HTurkyilmazOMO\n#OEMeKADRO #OEMe250KADRO',
+        'Şubat 2023’ten beri bekliyoruz. Orman Endüstri Mühendisleri olarak emeğimizin ve sabrımızın karşılığını istiyoruz. Milli servetimiz ormanlarımız ve sektörümüz için görev başı yapmak en doğal hakkımız. 🌲\n\n@HTurkyilmazOMO @kadircokcetin06 @BekirKARACABEY_\n#OEMeKADRO #OEMe250KADRO',
+        'Orman Genel Müdürlüğü (OGM) ile birlikte Milli Parklar (DKMP) bünyesinde de hak ettiğimiz 250 Orman Endüstri Mühendisi kadro talebinin karşılanmasını istiyoruz. Sesimizi birlikte duyuralım! 🌲☀️\n\n@HTurkyilmazOMO @kadircokcetin06 @BekirKARACABEY_\n#OEMeKADRO #OEMe250KADRO',
+        'OGM bünyesinde hak ettiğimiz 250 Orman Endüstri Mühendisi kadro talebinin bir an önce karşılanmasını sabırsızlıkla ve ısrarla bekliyoruz. Emeğimizin karşılığını almak en doğal hakkımız. 🌲\n\n@bekirkaracabey @HTurkyilmazOMO @kadircokcetin06\n#OEMeKADRO #OrmanEndüstriMühendisi',
+        '2016–2026 arasında toplam sadece 79 dış alım yapıldı; 2024, 2025 ve Ocak 2026 genel mühendis alımlarında OEM kontenjanı SIFIR kaldı! Aralık 2026’da OGM’de 250, DKMP’de 50 kadro bekliyoruz. 🌲\n\n@ibrahimyumakli @TCTarim @OGMgovtr\n#OEMeKADRO #OEMe250KADRO',
+        'ÖSYM merkezi KPSS (4869 nitelik kodu) yerleştirmelerinde yıllardır 0 kadro! Her yıl 300+ mezun veren Orman Endüstri Mühendisleri kamuda düzenli ve sürdürülebilir istihdam takvimi istiyor. 🌲\n\n@HTurkyilmazOMO @kadircokcetin06 @OGMgovtr\n#OEMeKADRO #OrmanEndüstriKadro',
+        'Orman kaynaklarımızın katma değerli şekilde ekonomiye kazandırılması için OGM depolarında ve DKMP sahalarında Orman Endüstri Mühendisleri kendi uzmanlık alanlarında istihdam edilmelidir. 🌲\n\n@ibrahimyumakli @BekirKARACABEY_ @milliparklar\n#OEMeKADRO #OrmanEndüstriDKMP',
+        'Barkod sistemiyle artan depo, tasnif ve standardizasyon iş yükünü sırtlayacak genç ve dinamik kadro hazır: 250 Orman Endüstri Mühendisi OGM’de göreve çağrılmayı bekliyor! 🌲🏭\n\n@OGMgovtr @bekirkaracabey @HTurkyilmazOMO\n#OEMe250KADRO #OEMeKADRO',
+        'Aralık atamalarında OGM’ye 250, DKMP’ye 50 Orman Endüstri Mühendisi kadrosu talebimizle sahada göreve hazırız. Teknik gücümüzle ülkemize hizmet etmek istiyoruz! 🌲\n\n@ibrahimyumakli @HTurkyilmazOMO @kadircokcetin06 @milliparklar\n#OEMeKADRO #OEMe250KADRO #DKMPOrmanEndüstriKadro'
+      ];
+
+      const tweetModal = document.getElementById('tweet-templates-modal');
+      const tweetList = document.getElementById('tweet-templates-list');
+      const openTweetBtns = document.querySelectorAll('[data-open-tweets]');
+      const closeTweetsBtn = document.getElementById('close-tweets-btn');
+      const closeTweetsFooterBtn = document.getElementById('close-tweets-footer-btn');
+      const randomTweetBtn = document.getElementById('random-tweet-btn');
+
+      const copyToClipboard = async (text) => {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(text);
+          return true;
+        }
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        ta.remove();
+        return true;
+      };
+
+      if (tweetList) {
+        TWEET_TEMPLATES.forEach((text, index) => {
+          const card = document.createElement('div');
+          card.className = 'rounded-[4px] border border-[#E6ECE8] bg-white p-4 transition-colors hover:border-fir/35';
+
+          const p = document.createElement('p');
+          p.className = 'whitespace-pre-line text-sm leading-relaxed text-ink';
+          p.textContent = text;
+
+          const actions = document.createElement('div');
+          actions.className = 'mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-[#F0F3F1] pt-3';
+
+          const meta = document.createElement('span');
+          meta.className = 'text-[11px] font-semibold text-ink-muted';
+          meta.textContent = `Şablon #${index + 1} • ${text.length} karakter`;
+
+          const btnGroup = document.createElement('div');
+          btnGroup.className = 'flex items-center gap-2';
+
+          const copyBtn = document.createElement('button');
+          copyBtn.type = 'button';
+          copyBtn.className = 'inline-flex items-center gap-1.5 rounded-[4px] border border-[#DCE3DF] bg-sage px-3 py-1.5 text-xs font-bold text-fir transition-colors hover:border-fir hover:bg-fir hover:text-white';
+          copyBtn.textContent = 'Kopyala';
+          copyBtn.addEventListener('click', async () => {
+            await copyToClipboard(text);
+            copyBtn.textContent = 'Kopyalandı ✓';
+            window.setTimeout(() => {
+              copyBtn.textContent = 'Kopyala';
+            }, 1800);
+          });
+
+          const shareLink = document.createElement('a');
+          shareLink.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
+          shareLink.target = '_blank';
+          shareLink.rel = 'noopener noreferrer';
+          shareLink.className = 'inline-flex items-center gap-1.5 rounded-[4px] bg-[#0F1419] px-3 py-1.5 text-xs font-bold text-white transition-colors hover:bg-fir';
+          shareLink.textContent = "X'te Paylaş ↗";
+
+          btnGroup.appendChild(copyBtn);
+          btnGroup.appendChild(shareLink);
+          actions.appendChild(meta);
+          actions.appendChild(btnGroup);
+
+          card.appendChild(p);
+          card.appendChild(actions);
+          tweetList.appendChild(card);
+        });
+      }
+
+      const openTweetModal = () => {
+        if (!tweetModal) return;
+        tweetModal.classList.remove('hidden');
+        tweetModal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      };
+
+      const closeTweetModal = () => {
+        if (!tweetModal) return;
+        tweetModal.classList.add('hidden');
+        tweetModal.classList.remove('flex');
+        document.body.style.overflow = '';
+      };
+
+      openTweetBtns.forEach((b) => b.addEventListener('click', openTweetModal));
+      if (closeTweetsBtn) closeTweetsBtn.addEventListener('click', closeTweetModal);
+      if (closeTweetsFooterBtn) closeTweetsFooterBtn.addEventListener('click', closeTweetModal);
+      if (tweetModal) {
+        tweetModal.addEventListener('click', (e) => {
+          if (e.target === tweetModal) closeTweetModal();
+        });
+      }
+      if (randomTweetBtn) {
+        randomTweetBtn.addEventListener('click', async () => {
+          const picked = TWEET_TEMPLATES[Math.floor(Math.random() * TWEET_TEMPLATES.length)];
+          await copyToClipboard(picked);
+          const span = randomTweetBtn.querySelector('span');
+          if (span) {
+            span.textContent = 'Rastgele Metin Kopyalandı ✓';
+            window.setTimeout(() => {
+              span.textContent = 'Rastgele Metin Kopyala';
+            }, 1800);
+          }
+        });
+      }
+
+      /* ------------------------------------------------------- */
+      /* 7. Image Lightbox Modal (#paylasimlar)                  */
+      /* ------------------------------------------------------- */
+      const lightboxModal = document.getElementById('image-lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const lightboxCaption = document.getElementById('lightbox-caption');
+      const lightboxLink = document.getElementById('lightbox-link');
+      const closeLightboxBtn = document.getElementById('close-lightbox-btn');
+      const lightboxTriggers = document.querySelectorAll('[data-lightbox-src]');
+
+      const closeLightbox = () => {
+        if (!lightboxModal) return;
+        lightboxModal.classList.add('hidden');
+        lightboxModal.classList.remove('flex');
+        document.body.style.overflow = '';
+      };
+
+      lightboxTriggers.forEach((trigger) => {
+        trigger.addEventListener('click', () => {
+          if (!lightboxModal || !lightboxImg) return;
+          lightboxImg.src = trigger.getAttribute('data-lightbox-src') || '';
+          lightboxImg.alt = trigger.getAttribute('data-lightbox-caption') || '';
+          if (lightboxCaption) lightboxCaption.textContent = trigger.getAttribute('data-lightbox-caption') || '';
+          if (lightboxLink) lightboxLink.href = trigger.getAttribute('data-lightbox-link') || '#';
+          lightboxModal.classList.remove('hidden');
+          lightboxModal.classList.add('flex');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      if (closeLightboxBtn) closeLightboxBtn.addEventListener('click', closeLightbox);
+      if (lightboxModal) {
+        lightboxModal.addEventListener('click', (e) => {
+          if (e.target === lightboxModal) closeLightbox();
+        });
+      }
+
+      /* ------------------------------------------------------- */
+      /* 8. One-Click Email Copy (#iletisim)                     */
+      /* ------------------------------------------------------- */
+      const copyEmailBtn = document.getElementById('copy-email-btn');
+      const copyEmailLabel = document.getElementById('copy-email-label');
+
+      if (copyEmailBtn && copyEmailLabel) {
+        copyEmailBtn.addEventListener('click', async () => {
+          await copyToClipboard('oemuhendisleri@gmail.com');
+          copyEmailLabel.textContent = 'Kopyalandı ✓';
+          window.setTimeout(() => {
+            copyEmailLabel.textContent = 'Kopyala';
+          }, 1800);
+        });
+      }
+
+      /* ------------------------------------------------------- */
+      /* 9. Navbar Scroll Spy & Back-to-Top Button               */
+      /* ------------------------------------------------------- */
+      const navLinks = document.querySelectorAll('header nav a.ms-nav-link');
+      const watchedSections = ['talepler', 'surec', 'istihdam', 'paylasimlar', 'iletisim']
+        .map((id) => document.getElementById(id))
+        .filter(Boolean);
+
+      if ('IntersectionObserver' in window && watchedSections.length) {
+        const spyObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const activeId = `#${entry.target.id}`;
+                navLinks.forEach((link) => {
+                  link.classList.toggle('is-active', link.getAttribute('href') === activeId);
+                });
+              }
+            });
+          },
+          { rootMargin: '-35% 0px -55% 0px', threshold: 0 }
+        );
+        watchedSections.forEach((sec) => spyObserver.observe(sec));
+      }
+
+      const backToTopBtn = document.getElementById('back-to-top-btn');
+      if (backToTopBtn) {
+        window.addEventListener(
+          'scroll',
+          () => {
+            const show = window.scrollY > 420;
+            backToTopBtn.classList.toggle('opacity-0', !show);
+            backToTopBtn.classList.toggle('translate-y-3', !show);
+            backToTopBtn.classList.toggle('pointer-events-none', !show);
+          },
+          { passive: true }
+        );
+
+        backToTopBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    });
+  </script>
+</body>
+</html>
